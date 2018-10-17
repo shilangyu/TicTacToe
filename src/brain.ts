@@ -20,16 +20,23 @@ class Brain {
 			.then(json => this.brain = json)
 	}
 
-	decide(board: string[]): Choice {
-
-
-		return
+	decide(boards: string[]): Choice {
+		for (const key of boards) {
+			if(key in this.brain) {
+				return this.brain[key].sort((a, b) => b.fitness - a.fitness)[0]
+			}
+		}
+		return {
+			x: -1,
+			y: -1,
+			fitness: -1
+		}
 	}
 
-	static parseBoard(board: Tile[][], player: string): string[] {
+	static parseBoard(board: Tile[][], playerSign: string): string[] {
 		const stringify = (signs: string[][]): string =>
 			signs.flat().map(e => {
-				if (e === player)
+				if (e === playerSign)
 					return '0'
 				else if (e !== '')
 					return '1'
