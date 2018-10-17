@@ -8,10 +8,23 @@ var Brain = /** @class */ (function () {
             .then(function (res) { return res.json(); })
             .then(function (json) { return _this.brain = json; });
     }
-    Brain.parseBoard = function (board, player) {
+    Brain.prototype.decide = function (boards) {
+        for (var _i = 0, boards_1 = boards; _i < boards_1.length; _i++) {
+            var key = boards_1[_i];
+            if (key in this.brain) {
+                return this.brain[key].sort(function (a, b) { return b.fitness - a.fitness; })[0];
+            }
+        }
+        return {
+            x: -1,
+            y: -1,
+            fitness: -1
+        };
+    };
+    Brain.parseBoard = function (board, playerSign) {
         var stringify = function (signs) {
             return signs.flat().map(function (e) {
-                if (e === player)
+                if (e === playerSign)
                     return '0';
                 else if (e !== '')
                     return '1';

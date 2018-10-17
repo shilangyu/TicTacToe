@@ -1,8 +1,8 @@
 "use strict";
 var board = [
-    [{ x: 0, y: 0, sign: '' }, { x: 1, y: 0, sign: '' }, { x: 2, y: 0, sign: '' }],
-    [{ x: 0, y: 1, sign: '' }, { x: 1, y: 1, sign: '' }, { x: 2, y: 1, sign: '' }],
-    [{ x: 0, y: 2, sign: '' }, { x: 1, y: 2, sign: 'X' }, { x: 2, y: 2, sign: '' }]
+    [{ x: 0, y: 0, sign: 'O' }, { x: 1, y: 0, sign: 'O' }, { x: 2, y: 0, sign: 'O' }],
+    [{ x: 0, y: 1, sign: 'O' }, { x: 1, y: 1, sign: 'O' }, { x: 2, y: 1, sign: 'O' }],
+    [{ x: 0, y: 2, sign: 'O' }, { x: 1, y: 2, sign: 'X' }, { x: 2, y: 2, sign: 'O' }]
 ];
 var env = {
     scale: 150,
@@ -12,18 +12,29 @@ var env = {
         y: 450
     }
 };
+var player = {
+    sign: 'X',
+    changeSign: function () {
+        this.sign = this.sign === 'X' ? 'O' : 'X';
+    }
+};
+var brain = new Brain('/decision.json');
 function setup() {
     createCanvas(env.canvasSize.x, env.canvasSize.y);
     background(env.background);
     textAlign(CENTER, CENTER);
     textSize(env.scale);
-    console.log(Brain.parseBoard(board, 'X'));
+    strokeWeight(15);
+    stroke(255);
+    noLoop();
 }
 function draw() {
     board.forEach(function (row) {
         return row.forEach(function (_a) {
             var x = _a.x, y = _a.y, sign = _a.sign;
-            return text(sign, x * env.scale + env.scale / 2, y * env.scale + env.scale / 2);
+            text(sign, env.scale * (x + 1 / 2), env.scale * (y + 1 / 2));
+            line(env.scale * x, 0, env.scale * x, env.canvasSize.y);
+            line(0, env.scale * y, env.canvasSize.x, env.scale * y);
         });
     });
 }
