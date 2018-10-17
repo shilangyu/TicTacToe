@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "http-server ./build",
     "watch": "tsc --watch",
-    "compile": "tsc"
+    "predeploy": "tsc",
+    "deploy": "cd build && git add --all && git push origin gh-pages && cd .."
   },
   "repository": {
     "type": "git",
