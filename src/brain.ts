@@ -20,6 +20,12 @@ class Brain {
 			.then(json => this.brain = json)
 	}
 
+	decide(board: string[]): Choice {
+
+
+		return
+	}
+
 	static parseBoard(board: Tile[][], player: string): string[] {
 		const stringify = (signs: string[][]): string =>
 			signs.flat().map(e => {
