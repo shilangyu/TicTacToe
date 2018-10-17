@@ -21,19 +21,35 @@ class Brain {
 	}
 
 	static parseBoard(board: Tile[][], player: string): string[] {
-		const stringify = (signs: string[][]) => 
+		const stringify = (signs: string[][]): string =>
 			signs.flat().map(e => {
-				if(e === player)
+				if (e === player)
 					return '0'
-				else if(e !== '')
+				else if (e !== '')
 					return '1'
-				else 
+				else
 					return 'null'
 			}).join('')
-			
-		const signs = board.map(row => row.map(({ sign }) => sign))
-		stringify(signs)
 
-		return [stringify(signs)]
+
+		const rotate = (matrix: any[][]): any[][] => {
+			const N = matrix.length - 1
+			const result = matrix.map((row, i) =>
+				row.map((val, j) => matrix[N - j][i])
+			)
+			matrix.length = 0     
+			matrix.push(...result)
+			return matrix
+		}
+
+		let signs = board.map(row => row.map(({ sign }) => sign))
+
+		const result: string[] = []
+		for(let i = 0; i < 4; i++) {
+			result.push(stringify(signs))
+			signs = rotate(signs)
+		}
+
+		return result
 	}
 }
