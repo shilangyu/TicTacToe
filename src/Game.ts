@@ -9,13 +9,26 @@ class Game {
 		this.turn = 0
 
 		window.addEventListener('aiTurn', evt => {
-			console.log(this.win())
+			const outcome = this.win()
+			if(outcome !== null || this.board.every(row => row.every(cell => cell.sign !== null))) 
+				this.endGame(outcome)
+
 			this.turn = 1
 		})
 		window.addEventListener('playerTurn', evt => {
-			console.log(this.win())
+			const outcome = this.win()
+			if(outcome !== null || this.board.every(row => row.every(cell => cell.sign !== null))) 
+				this.endGame(outcome)
+
 			this.turn = 0
 		})
+	}
+
+	endGame(winner: Sign) {
+		(document.querySelector('#msg') as HTMLSpanElement).innerHTML = `
+			${winner === 0 ? 'You won' : winner === 1 ? 'AI won' : 'Draw'} <br>
+			<button onclick="window.location.reload()"> restart </button>
+		`
 	}
 
 	win(): Sign {
