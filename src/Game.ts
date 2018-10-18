@@ -4,7 +4,11 @@ interface Signs {
 }
 
 class Game {
-	constructor(public board: Tile[][], public signs: Signs) {
-		
+	turn: Sign
+	constructor(private board: Tile[][], public signs: Signs) {
+		this.turn = 0
+
+		window.addEventListener('aiTurn', evt => this.turn = 1)
+		window.addEventListener('playerTurn', evt => this.turn = 0)
 	}
 }

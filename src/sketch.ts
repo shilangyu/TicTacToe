@@ -31,3 +31,8 @@ function setup() {
 function draw() {
 	board.draw(game.signs)
 }
+
+window.addEventListener('aiTurn', evt => {
+	const { x, y } = brain.decide(Brain.parseBoard(board.tiles))
+	board.aiMove(y, x)
+})

@@ -4,7 +4,7 @@ class Board {
 	constructor(public width: number, public height: number, public target?: HTMLCanvasElement) {
 		this.tiles = new Array(height).fill(null).map((_, y) =>
 			new Array(width).fill(null).map((_, x) =>
-				({ x, y, sign: null })
+				new Tile({ x, y, sign: null })
 			)
 		)
 
@@ -23,14 +23,26 @@ class Board {
 		)
 	}
 
+	playerMove(x: number, y: number) {
+		this.tiles[x][y].sign = 0
+		window.dispatchEvent(new CustomEvent('aiTurn'))
+		redraw()
+	}
+
+	aiMove(x: number, y: number) {
+		this.tiles[x][y].sign = 1
+		window.dispatchEvent(new CustomEvent('playerTurn'))
+		redraw()
+	}
+
 	private addEventListener() {
 		(this.target as HTMLCanvasElement).addEventListener('click', ({ clientX: x, clientY: y, target }) => {
 			const { clientHeight: canvasHeight, clientWidth: canvasWidth } = (target as HTMLElement)
 
 			const grid = [x / (canvasWidth / this.width), y / (canvasHeight / this.height)].map(Math.floor)
 
-			this.tiles[grid[1]][grid[0]].sign = 0
-			redraw()
+			if(game.turn === 0)
+				this.playerMove(grid[1], grid[0])
 		})
 	}
 
