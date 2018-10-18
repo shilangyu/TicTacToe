@@ -1,16 +1,3 @@
-declare type Sign = (0 | 1 | null)
-interface Tile {
-	x: number,
-	y: number,
-	sign: Sign
-}
-
-const board: Tile[][] = [
-	[{ x: 0, y: 0, sign: null }, { x: 1, y: 0, sign: null }, { x: 2, y: 0, sign: null }],
-	[{ x: 0, y: 1, sign: null }, { x: 1, y: 1, sign: null }, { x: 2, y: 1, sign: null }],
-	[{ x: 0, y: 2, sign: null }, { x: 1, y: 2, sign: null }, { x: 2, y: 2, sign: null }]
-]
-
 const env = {
 	scale: 150,
 	background: 151,
@@ -24,7 +11,7 @@ const env = {
 	}
 }
 
-
+const board = new Board(3, 3)
 const brain = new Brain('/decision.json')
 
 function setup() {
@@ -38,11 +25,11 @@ function setup() {
 	fill(255)
 
 	noLoop()
-	console.log(Brain.parseBoard(board))
+	console.log(Brain.parseBoard(board.tiles))
 }
 
 function draw() {
-	board.forEach(row =>
+	board.tiles.forEach(row =>
 		row.forEach(({ x, y, sign }) => {
 			const txt = sign === null ? '' : sign === 0 ? env.signs.player : env.signs.AI
 			text(txt, env.scale * (x + 1 / 2), env.scale * (y + 1 / 2))
