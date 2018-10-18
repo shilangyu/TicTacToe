@@ -24,9 +24,11 @@ class Board {
 	}
 
 	playerMove(x: number, y: number) {
-		this.tiles[x][y].sign = 0
-		window.dispatchEvent(new CustomEvent('aiTurn'))
-		redraw()
+		if(this.tiles[x][y].sign === null) {
+			this.tiles[x][y].sign = 0
+			window.dispatchEvent(new CustomEvent('aiTurn'))
+			redraw()
+		}
 	}
 
 	aiMove(x: number, y: number) {
