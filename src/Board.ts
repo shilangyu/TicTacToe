@@ -12,7 +12,7 @@ class Board {
 			this.addEventListener()
 	}
 
-	draw(signs: { AI: string, player: string }) {
+	draw(signs: Signs) {
 		this.tiles.forEach(row =>
 			row.forEach(({ x, y, sign }) => {
 				const txt = sign === null ? '' : sign === 0 ? signs.player : signs.AI
