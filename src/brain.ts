@@ -33,16 +33,9 @@ class Brain {
 		}
 	}
 
-	static parseBoard(board: Tile[][], playerSign: string): string[] {
-		const stringify = (signs: string[][]): string =>
-			signs.flat().map(e => {
-				if (e === playerSign)
-					return '0'
-				else if (e !== '')
-					return '1'
-				else
-					return 'null'
-			}).join('')
+	static parseBoard(board: Tile[][]): string[] {
+		const stringify = (signs: Sign[][]): string =>
+			signs.flat().map(String).join('')
 
 
 		const rotate = (matrix: any[][]): any[][] => {
