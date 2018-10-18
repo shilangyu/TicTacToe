@@ -21,11 +21,20 @@ class Brain {
 	}
 
 	decide(boards: string[]): Choice {
-		for (const key of boards) {
-			if(key in this.brain) {
-				return this.brain[key].sort((a, b) => b.fitness - a.fitness)[0]
+		for (let i = 0; i < boards.length; i++) {
+			const key = boards[i]
+
+			if (key in this.brain) {
+				const { x, y, fitness } = this.brain[key].sort((a, b) => b.fitness - a.fitness)[0]
+				const ang = (Math.PI / 2) * i
+				const cos = Math.cos(ang)
+				const sin = Math.sin(ang)
+				const rotatedX = Math.round(10000 * ((x - 1) * cos - (y - 1) * sin)) / 10000
+				const rotatedY = Math.round(10000 * ((x - 1) * sin + (y - 1) * cos)) / 10000
+				return { x: rotatedX+1, y: rotatedY+1, fitness }
 			}
 		}
+
 		return {
 			x: -1,
 			y: -1,
@@ -41,9 +50,9 @@ class Brain {
 		const rotate = (matrix: any[][]): any[][] => {
 			const N = matrix.length - 1
 			const result = matrix.map((row, i) =>
-				row.map((val, j) => matrix[N - j][i])
+				row.map((_, j) => matrix[N - j][i])
 			)
-			matrix.length = 0     
+			matrix.length = 0
 			matrix.push(...result)
 			return matrix
 		}
@@ -51,7 +60,7 @@ class Brain {
 		let signs = board.map(row => row.map(({ sign }) => sign))
 
 		const result: string[] = []
-		for(let i = 0; i < 4; i++) {
+		for (let i = 0; i < 4; i++) {
 			result.push(stringify(signs))
 			signs = rotate(signs)
 		}

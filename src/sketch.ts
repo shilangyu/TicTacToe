@@ -34,5 +34,6 @@ function draw() {
 
 window.addEventListener('aiTurn', evt => {
 	const { x, y } = brain.decide(Brain.parseBoard(board.tiles))
-	board.aiMove(y, x)
+
+	board.aiMove(x, y)
 })
