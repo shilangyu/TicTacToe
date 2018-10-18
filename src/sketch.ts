@@ -24,9 +24,8 @@ function setup() {
 	stroke(255)
 	fill(255)
 	
-	// noLoop()
+	noLoop()
 	board.canvas = document.querySelector('canvas') || document.createElement('canvas')
-	console.log(Brain.parseBoard(board.tiles))
 }
 
 function draw() {

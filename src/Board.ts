@@ -30,6 +30,7 @@ class Board {
 			const grid = [x / (canvasWidth / this.width), y / (canvasHeight / this.height)].map(Math.floor)
 
 			this.tiles[grid[1]][grid[0]].sign = 0
+			redraw()
 		})
 	}
 
