@@ -11,7 +11,7 @@
     "start": "http-server ./build",
     "watch": "tsc --watch",
     "predeploy": "tsc",
-    "deploy": "cd build && git add --all && git push origin gh-pages && cd .."
+    "deploy": "cd build && git add --all && git commit -m \"Deploy\" && git push origin gh-pages && cd .."
   },
   "repository": {
     "type": "git",
