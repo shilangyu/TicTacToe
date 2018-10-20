@@ -1,11 +1,10 @@
 interface Choice {
 	x: number,
-	y: number,
-	fitness: number
+	y: number
 }
 
 interface Decisions {
-	[key: string]: Choice[]
+	[key: string]: Choice
 }
 
 
@@ -25,20 +24,19 @@ class Brain {
 			const key = boards[i]
 
 			if (key in this.brain) {
-				const { x, y, fitness } = this.brain[key].sort((a, b) => b.fitness - a.fitness)[0]
+				const { x, y } = this.brain[key]
 				const ang = (Math.PI / 2) * i
 				const cos = Math.cos(ang)
 				const sin = Math.sin(ang)
 				const rotatedX = Math.round(10000 * ((x - 1) * cos - (y - 1) * sin)) / 10000
 				const rotatedY = Math.round(10000 * ((x - 1) * sin + (y - 1) * cos)) / 10000
-				return { x: rotatedX+1, y: rotatedY+1, fitness }
+				return { x: rotatedX+1, y: rotatedY+1 }
 			}
 		}
 
 		return {
 			x: -1,
-			y: -1,
-			fitness: -1
+			y: -1
 		}
 	}
 

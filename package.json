@@ -11,7 +11,7 @@
     "start": "http-server ./build",
     "watch": "tsc --watch",
     "predeploy": "tsc",
-    "deploy": "./node_modules/.bin/ts-node deploy.ts"
+    "deploy": "./node_modules/.bin/ts-node src/deploy.ts"
   },
   "repository": {
     "type": "git",

@@ -8,7 +8,7 @@ const env = {
 }
 
 const board = new Board(3, 3)
-const brain = new Brain('./decision.json')
+const brain = new Brain('./parsed-decision.json')
 const game = new Game(board.tiles, {
 	AI: 'o',
 	player: '×'
