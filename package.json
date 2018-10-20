@@ -11,7 +11,7 @@
     "start": "http-server ./build",
     "watch": "tsc --watch",
     "predeploy": "tsc",
-    "deploy": "cd build && git add --all && git commit -m \"Deploy\" && git push origin gh-pages && cd .."
+    "deploy": "./node_modules/.bin/ts-node deploy.ts"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,9 @@
   },
   "homepage": "https://github.com/shilangyu/TicTacToe#readme",
   "devDependencies": {
+    "@types/node": "^10.12.0",
     "http-server": "^0.11.1",
+    "ts-node": "^7.0.1",
     "typescript": "^3.1.3"
   }
 }
