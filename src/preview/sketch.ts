@@ -1,6 +1,6 @@
-import Brain from './Brain'
-import Board from './Board'
-import Game from './Game'
+import Brain from './Brain.js'
+import Board from './Board.js'
+import Game from './Game.js'
 
 const env = {
 	scale: 150,
@@ -18,7 +18,7 @@ const game = new Game(board.tiles, {
 	player: '×'
 })
 
-function setup() {
+;(window as any).setup = function () {
 	createCanvas(env.canvasSize.x, env.canvasSize.y)
 	background(env.background)
 
@@ -29,9 +29,18 @@ function setup() {
 	fill(255)
 
 	noLoop()
+
+	;(document.querySelector('canvas') as HTMLCanvasElement).addEventListener('click', ({ clientX: x, clientY: y, target }) => {
+		const { clientHeight: canvasHeight, clientWidth: canvasWidth } = (target as HTMLElement)
+
+		const grid = [x / (canvasWidth / board.width), y / (canvasHeight / board.height)].map(Math.floor)
+
+		if (game.turn === 0)
+			board.playerMove(grid[1], grid[0])
+	})
 }
 
-function draw() {
+;(window as any).draw = function () {
 	board.draw(game.signs, env.scale, env.canvasSize)
 }
 
@@ -40,12 +49,3 @@ window.addEventListener('aiTurn', evt => {
 
 	board.aiMove(x, y)
 })
-
-	; (document.querySelector('canvas') as HTMLCanvasElement).addEventListener('click', ({ clientX: x, clientY: y, target }) => {
-		const { clientHeight: canvasHeight, clientWidth: canvasWidth } = (target as HTMLElement)
-
-		const grid = [x / (canvasWidth / board.width), y / (canvasHeight / board.height)].map(Math.floor)
-
-		if (game.turn === 0)
-			board.playerMove(grid[1], grid[0])
-	})
