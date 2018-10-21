@@ -1,3 +1,7 @@
+import Brain from './Brain'
+import Board from './Board'
+import Game from './Game'
+
 const env = {
 	scale: 150,
 	background: 151,
@@ -25,11 +29,10 @@ function setup() {
 	fill(255)
 
 	noLoop()
-	board.canvas = document.querySelector('canvas') || document.createElement('canvas')
 }
 
 function draw() {
-	board.draw(game.signs)
+	board.draw(game.signs, env.scale, env.canvasSize)
 }
 
 window.addEventListener('aiTurn', evt => {
@@ -37,3 +40,12 @@ window.addEventListener('aiTurn', evt => {
 
 	board.aiMove(x, y)
 })
+
+	; (document.querySelector('canvas') as HTMLCanvasElement).addEventListener('click', ({ clientX: x, clientY: y, target }) => {
+		const { clientHeight: canvasHeight, clientWidth: canvasWidth } = (target as HTMLElement)
+
+		const grid = [x / (canvasWidth / board.width), y / (canvasHeight / board.height)].map(Math.floor)
+
+		if (game.turn === 0)
+			board.playerMove(grid[1], grid[0])
+	})

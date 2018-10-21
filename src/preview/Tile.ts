@@ -1,7 +1,3 @@
-class Tile {
-	constructor(data: Tile) {
-		this.x = data.x
-		this.y = data.y
-		this.sign = data.sign
-	}
+export default class Tile implements Tile {
+	constructor(public x: Coord, public y: Coord, public sign: Sign) {}
 }

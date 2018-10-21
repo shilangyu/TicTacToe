@@ -1,4 +1,4 @@
-class Brain {
+export default class Brain {
 	brain: Decisions;
 
 	constructor(public source: string) {
