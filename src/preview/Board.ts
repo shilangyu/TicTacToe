@@ -4,7 +4,7 @@ class Board {
 	constructor(public width: number, public height: number, public target?: HTMLCanvasElement) {
 		this.tiles = new Array(height).fill(null).map((_, y) =>
 			new Array(width).fill(null).map((_, x) =>
-				new Tile({ x, y, sign: null })
+				new Tile({ x: x as Coord, y: y as Coord, sign: null })
 			)
 		)
 
