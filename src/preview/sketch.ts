@@ -12,13 +12,15 @@ const env = {
 }
 
 const board = new Board(3, 3)
-const brain = new Brain('./parsed-decision.json')
+const brain = new Brain()
 const game = new Game(board.tiles, {
 	AI: 'o',
 	player: '×'
 })
 
-;(window as any).setup = function () {
+;(window as any).setup = async function () {
+	brain.brain = await (await fetch('./parsed-decision.json')).json()
+
 	createCanvas(env.canvasSize.x, env.canvasSize.y)
 	background(env.background)
 

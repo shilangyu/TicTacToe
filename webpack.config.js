@@ -19,6 +19,7 @@ fs.writeFileSync(path.join(__dirname, 'public', 'parsed-decision.json'), JSON.st
 
 module.exports = {
   entry: './build/preview/sketch.js',
+  mode: 'production',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public')

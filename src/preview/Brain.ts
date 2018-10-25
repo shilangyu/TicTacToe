@@ -1,12 +1,8 @@
 export default class Brain {
 	brain: Decisions;
 
-	constructor(public source: string) {
+	constructor() {
 		this.brain = {}
-
-		fetch(source)
-			.then(res => res.json())
-			.then(json => this.brain = json)
 	}
 
 	decide(boards: string[]): Guess {
