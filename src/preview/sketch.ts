@@ -1,6 +1,5 @@
 import Brain from './Brain.js'
 import Board from './Board.js'
-import Game from './Game.js'
 
 const env = {
 	scale: 150,
@@ -11,12 +10,11 @@ const env = {
 	}
 }
 
-const board = new Board(3, 3)
-const brain = new Brain()
-const game = new Game(board.tiles, {
+const board = new Board(3, 3, {
 	AI: 'o',
 	player: '×'
 })
+const brain = new Brain()
 
 ;(window as any).setup = async function () {
 	brain.brain = await (await fetch('./parsed-decision.json')).json()
@@ -37,17 +35,15 @@ const game = new Game(board.tiles, {
 
 		const grid = [x / (canvasWidth / board.width), y / (canvasHeight / board.height)].map(Math.floor)
 
-		if (game.turn === 0)
+		if (board.turn === 0) {
 			board.playerMove(grid[1], grid[0])
+
+			const { x, y } = brain.decide(Brain.parseBoard(board.tiles))
+			board.aiMove(x, y)
+		}
 	})
 }
 
 ;(window as any).draw = function () {
-	board.draw(game.signs, env.scale, env.canvasSize)
+	board.draw(env.scale, env.canvasSize)
 }
-
-window.addEventListener('aiTurn', evt => {
-	const { x, y } = brain.decide(Brain.parseBoard(board.tiles))
-
-	board.aiMove(x, y)
-})
