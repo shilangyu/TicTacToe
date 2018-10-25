@@ -9,8 +9,8 @@ fs.mkdtemp(os.tmpdir(), (err, tempPath) => {
 	if (err) throw err
 
 	cp.execSync(`git fetch`)
-	cp.execSync(`git worktree add "${tempPath}" gh-pages`)
 	cp.execSync(`git pull`)
+	cp.execSync(`git worktree add "${tempPath}" gh-pages`)
 
 	fs.readdirSync(pjoin('..', 'public'))
 		.forEach(file => fs.copyFileSync(pjoin('..', 'public', file), path.join(tempPath, file)))
