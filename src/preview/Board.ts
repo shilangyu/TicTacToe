@@ -31,13 +31,13 @@ export default class Board {
 	}
 
 	private toggleTurn() {
-		const outcome = this.win()
-		if (outcome !== null || this.full)
-			this.endGame(outcome)
-
 		this.turn = 0 ? 1 : 0
 		if(this.mode === 'prod')
 			redraw()
+
+		const outcome = this.win()
+		if (outcome !== null || this.full)
+			this.endGame(outcome)
 	}
 
 	get full() {
@@ -101,6 +101,7 @@ export default class Board {
 				<button onclick="window.location.reload()"> restart </button>
 			`
 		}
+		this.turn = 1
 	}
 
 	win(): Sign {
