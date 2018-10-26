@@ -1,4 +1,5 @@
-import Tile from './Tile.js'
+import Tile from './Tile'
+import { rotate90 } from '../helper'
 
 interface Signs {
 	AI: string
@@ -9,7 +10,7 @@ export default class Board {
 	tiles: Tile[][]
 	turn: Sign
 
-	constructor(public width: number, public height: number, public signs: Signs) {
+	constructor(public width: number, public height: number, public signs: Signs = {AI: 'o', player: '×'}) {
 		this.tiles = new Array(height).fill(null).map((_, y) =>
 			new Array(width).fill(null).map((_, x) =>
 				new Tile(x as Coord, y as Coord, null)
@@ -29,12 +30,31 @@ export default class Board {
 		)
 	}
 
-	toggleTurn() {
+	private toggleTurn() {
 		const outcome = this.win()
 		if (outcome !== null || this.tiles.every(row => row.every(cell => cell.sign !== null)))
 			this.endGame(outcome)
 
 		this.turn = 0 ? 1 : 0
+	}
+
+	get stringified(): string {
+		return this.tiles
+			.map(row => row.map(({ sign }) => sign))
+			.flat()
+			.map(String)
+			.join('')
+	}
+
+	get rotations(): string[] {
+		const temp = new Board(3, 3)
+		temp.tiles = this.tiles.map(row => row.map(e => ({...e})))
+		const result: string[] = []
+		for (let i = 0; i < 4; i++) {
+			result.push(temp.stringified)
+			temp.tiles = rotate90(temp.tiles)
+		}
+		return result
 	}
 
 	playerMove(x: number, y: number) {

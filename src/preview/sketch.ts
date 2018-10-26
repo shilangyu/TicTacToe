@@ -1,5 +1,5 @@
-import Brain from './Brain.js'
-import Board from './Board.js'
+import Brain from './Brain'
+import Board from './Board'
 
 const env = {
 	scale: 150,
@@ -10,10 +10,7 @@ const env = {
 	}
 }
 
-const board = new Board(3, 3, {
-	AI: 'o',
-	player: '×'
-})
+const board = new Board(3, 3)
 const brain = new Brain()
 
 ;(window as any).setup = async function () {
@@ -38,7 +35,7 @@ const brain = new Brain()
 		if (board.turn === 0) {
 			board.playerMove(grid[1], grid[0])
 
-			const { x, y } = brain.decide(Brain.parseBoard(board.tiles))
+			const { x, y } = brain.decide(board.rotations)
 			board.aiMove(x, y)
 		}
 	})

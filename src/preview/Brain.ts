@@ -25,30 +25,4 @@ export default class Brain {
 			y: -1 as Coord
 		}
 	}
-
-	static parseBoard(board: Tile[][]): string[] {
-		const stringify = (signs: Sign[][]): string =>
-			signs.flat().map(String).join('')
-
-
-		const rotate = (matrix: any[][]): any[][] => {
-			const N = matrix.length - 1
-			const result = matrix.map((row, i) =>
-				row.map((_, j) => matrix[N - j][i])
-			)
-			matrix.length = 0
-			matrix.push(...result)
-			return matrix
-		}
-
-		let signs = board.map(row => row.map(({ sign }) => sign))
-
-		const result: string[] = []
-		for (let i = 0; i < 4; i++) {
-			result.push(stringify(signs))
-			signs = rotate(signs)
-		}
-
-		return result
-	}
 }
