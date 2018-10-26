@@ -32,12 +32,16 @@ export default class Board {
 
 	private toggleTurn() {
 		const outcome = this.win()
-		if (outcome !== null || this.tiles.every(row => row.every(cell => cell.sign !== null)))
+		if (outcome !== null || this.full)
 			this.endGame(outcome)
 
 		this.turn = 0 ? 1 : 0
 		if(this.mode === 'prod')
 			redraw()
+	}
+
+	get full() {
+		return this.tiles.every(row => row.every(cell => cell.sign !== null))
 	}
 
 	get stringified(): string {
