@@ -30,7 +30,7 @@ const brain = new Brain()
 	;(document.querySelector('canvas') as HTMLCanvasElement).addEventListener('click', ({ clientX: x, clientY: y, target }) => {
 		const { clientHeight: canvasHeight, clientWidth: canvasWidth } = (target as HTMLElement)
 
-		const grid = [x / (canvasWidth / board.width), y / (canvasHeight / board.height)].map(Math.floor)
+		const grid = [x / (canvasWidth / board.width), y / (canvasHeight / board.height)].map(e => Math.floor(e) as Coord)
 
 		if (board.turn === 0) {
 			board.playerMove(grid[1], grid[0])

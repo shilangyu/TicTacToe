@@ -1,7 +1,7 @@
 export default class Brain {
 	brain: Decisions;
 
-	constructor() {
+	constructor(public mode: 'dev' | 'prod' = 'prod') {
 		this.brain = {}
 	}
 
@@ -10,7 +10,7 @@ export default class Brain {
 			const key = boards[i]
 
 			if (key in this.brain) {
-				const { x, y } = this.brain[key] as Guess
+				const { x, y } = (this.mode === 'prod' ? this.brain[key] : (this.brain[key] as FitGuess[]).sort((a, b) => b.fitness - a.fitness)[0]) as Guess
 				const ang = (Math.PI / 2) * i
 				const cos = Math.cos(ang)
 				const sin = Math.sin(ang)

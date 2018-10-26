@@ -10,7 +10,7 @@ export default class Board {
 	tiles: Tile[][]
 	turn: Sign
 
-	constructor(public width: number, public height: number, public signs: Signs = {AI: 'o', player: '×'}) {
+	constructor(public width: number, public height: number, public mode: 'dev' | 'prod' = 'prod', public signs: Signs = {AI: 'o', player: '×'} ) {
 		this.tiles = new Array(height).fill(null).map((_, y) =>
 			new Array(width).fill(null).map((_, x) =>
 				new Tile(x as Coord, y as Coord, null)
@@ -36,12 +36,14 @@ export default class Board {
 			this.endGame(outcome)
 
 		this.turn = 0 ? 1 : 0
+		if(this.mode === 'prod')
+			redraw()
 	}
 
 	get stringified(): string {
 		return this.tiles
 			.map(row => row.map(({ sign }) => sign))
-			.flat()
+			.reduce((prev, curr) => [...prev, ...curr], [])
 			.map(String)
 			.join('')
 	}
@@ -57,25 +59,27 @@ export default class Board {
 		return result
 	}
 
-	playerMove(x: number, y: number) {
+	playerMove(x: Coord, y: Coord) {
 		if (this.tiles[x][y].sign === null) {
 			this.tiles[x][y].sign = 0
 			this.toggleTurn()
-			redraw()
 		}
 	}
 
-	aiMove(x: number, y: number) {
+	aiMove(x: Coord, y: Coord) {
 		this.tiles[x][y].sign = 1
 		this.toggleTurn()
-		redraw()
 	}
 
 	endGame(winner: Sign) {
-		(document.querySelector('#msg') as HTMLSpanElement).innerHTML = `
-			${winner === 0 ? 'You won' : winner === 1 ? 'AI won' : 'Draw'} <br>
-			<button onclick="window.location.reload()"> restart </button>
-		`
+		if(this.mode === 'dev') {
+			console.log(winner === 0 ? 'You won' : winner === 1 ? 'AI won' : 'Draw')
+		} else {
+			(document.querySelector('#msg') as HTMLSpanElement).innerHTML = `
+				${winner === 0 ? 'You won' : winner === 1 ? 'AI won' : 'Draw'} <br>
+				<button onclick="window.location.reload()"> restart </button>
+			`
+		}
 	}
 
 	win(): Sign {
