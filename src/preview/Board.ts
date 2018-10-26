@@ -1,5 +1,5 @@
 import Tile from './Tile'
-import { rotate90 } from '../helper'
+import { rotate, mirror } from '../helper'
 
 interface Signs {
 	AI: string
@@ -10,7 +10,7 @@ export default class Board {
 	tiles: Tile[][]
 	turn: Sign
 
-	constructor(public width: number, public height: number, public mode: 'dev' | 'prod' = 'prod', public signs: Signs = {AI: 'o', player: '×'} ) {
+	constructor(public width: number, public height: number, public mode: 'dev' | 'prod' = 'prod', public signs: Signs = {AI: '○', player: '×'} ) {
 		this.tiles = new Array(height).fill(null).map((_, y) =>
 			new Array(width).fill(null).map((_, x) =>
 				new Tile(x as Coord, y as Coord, null)
@@ -55,11 +55,28 @@ export default class Board {
 	get rotations(): string[] {
 		const temp = new Board(3, 3)
 		temp.tiles = this.tiles.map(row => row.map(e => ({...e})))
+		const base = this.tiles.map(row => row.map(e => ({...e})))
+
 		const result: string[] = []
 		for (let i = 0; i < 4; i++) {
 			result.push(temp.stringified)
-			temp.tiles = rotate90(temp.tiles)
+			temp.tiles = rotate(base, i)
 		}
+
+		return result
+	}
+
+	get mirrors(): string[] {
+		const temp = new Board(3, 3)
+		temp.tiles = this.tiles.map(row => row.map(e => ({...e})))
+		const base = this.tiles.map(row => row.map(e => ({...e})))
+
+		const result: string[] = []
+		for (let i = 0; i < 4; i++) {
+			result.push(temp.stringified)
+			temp.tiles = mirror(base, i)
+		}
+
 		return result
 	}
 
