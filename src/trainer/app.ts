@@ -13,7 +13,7 @@ brain.brain = decision
 const games = Number(process.argv[2])
 
 
-if(process.argv.includes('help')) {
+if (process.argv.includes('help')) {
 	console.log(`
 Usage: 
 	node trainer <amount of games>
@@ -41,8 +41,9 @@ const playerMove = (): [Coord, Coord] => {
 	return [playerX, playerY]
 }
 
-
+let off = 0, def = 0
 for (let i = 0; i < games; i++) {
+	process.stdout.write(`\r${(i / games * 100).toFixed(2).padStart(5)}%`)
 	board = new Board(3, 3, 'dev')
 	let moves = 0
 
@@ -63,17 +64,19 @@ for (let i = 0; i < games; i++) {
 			y = yy
 			board.aiMove(x, y)
 		}
+
 		const outcome = board.win()
 		if (outcome === 0) {
 			let i = 0
 			for (const key of [...prevRotations, ...prevMirrors]) {
-				if(key in brain.brain) {
+				if (key in brain.brain) {
 					let target = brain.brain[key] as FitGuess[]
-					if(target.length === 1) break
+					if (target.length === 1) break
 
-					let [xx, yy] = mapxy(prevX, prevY, i%4, i < 4 ? 'rotation' : 'mirror')
+					let [xx, yy] = mapxy(prevX, prevY, i % 4, i < 4 ? 'rotation' : 'mirror')
 
 					target.splice(target.indexOf(target.find(e => e.x === xx && e.y === yy) as FitGuess), 1)
+					def++
 					break
 				}
 				i++
@@ -82,12 +85,16 @@ for (let i = 0; i < games; i++) {
 		} else if (outcome === 1) {
 			let i = 0
 			for (const key of [...rotations, ...mirrors]) {
-				if(key in brain.brain) {
-					let [xx, yy] = mapxy(x, y, i%4, i < 4 ? 'rotation' : 'mirror')
+				if (key in brain.brain) {
+					let target = brain.brain[key] as FitGuess[]
+					if (target.length === 1) break
 
-					;(brain.brain[key] as FitGuess[]) = [{
+					let [xx, yy] = mapxy(x, y, i % 4, i < 4 ? 'rotation' : 'mirror');
+
+					(brain.brain[key] as FitGuess[]) = [{
 						x: xx, y: yy, fitness: 100
 					}]
+					off++
 					break
 				}
 				i++
@@ -102,3 +109,5 @@ for (let i = 0; i < games; i++) {
 }
 
 fs.writeFileSync(path.join(__dirname, 'decision.json'), JSON.stringify(brain.brain, null, 4))
+
+process.stdout.write(`\rLearned ${def} new defensive moves and ${off} offensive ones.`)
