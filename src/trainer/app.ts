@@ -29,16 +29,15 @@ Description:
 }
 
 
-const playerMove = (): [Coord, Coord] => {
-	const randMove = (): Coord[] =>
-		new Array(2).fill(null).map(e => Math.floor(Math.random() * 3) as Coord)
+const playerMove = (board: Tile[][]): [Coord, Coord] => {
+	let choices: number[][] = []
+	board.flat().forEach((e, i) => {
+		if(e.sign === null)
+			choices.push([Math.floor(i / 3), i % 3])
+	})
 
-	let playerX: Coord, playerY: Coord
-	do {
-		[playerX, playerY] = randMove()
-	} while (board.tiles[playerX][playerY].sign !== null)
-
-	return [playerX, playerY]
+	const [x, y] = choices[Math.floor(Math.random() * choices.length)] as Coord[]
+	return [x, y]
 }
 
 let off = 0, def = 0
@@ -56,7 +55,7 @@ for (let i = 0; i < games; i++) {
 		let { rotations, mirrors } = board
 
 		if (++moves % 2) {
-			[x, y] = playerMove()
+			[x, y] = playerMove(board.tiles)
 			board.playerMove(x, y)
 		} else {
 			const { x: xx, y: yy } = brain.decide(board.rotations, board.mirrors)
