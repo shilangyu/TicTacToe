@@ -81,10 +81,8 @@ export default class Board {
 	}
 
 	playerMove(x: Coord, y: Coord) {
-		if (this.tiles[x][y].sign === null) {
-			this.tiles[x][y].sign = 0
-			this.toggleTurn()
-		}
+		this.tiles[x][y].sign = 0
+		this.toggleTurn()
 	}
 
 	aiMove(x: Coord, y: Coord) {

@@ -32,10 +32,10 @@ const brain = new Brain()
 
 		const grid = [x / (canvasWidth / board.width), y / (canvasHeight / board.height)].map(e => Math.floor(e) as Coord)
 
-		if (board.turn === 0) {
+		if (board.turn === 0 && board.tiles[grid[1]][grid[0]].sign === null) {
 			board.playerMove(grid[1], grid[0])
 
-			const { x, y } = brain.decide(board.rotations)
+			const { x, y } = brain.decide(board.rotations, board.mirrors)
 			board.aiMove(x, y)
 		}
 	})
