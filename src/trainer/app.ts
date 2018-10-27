@@ -13,6 +13,22 @@ brain.brain = decision
 const games = Number(process.argv[2])
 
 
+if(process.argv.includes('help')) {
+	console.log(`
+Usage: 
+	node trainer <amount of games>
+
+Flags: 
+	--player: trains the AI where the player starts
+	--AI: trains the AI where the AI starts
+
+Description:
+	Trains the decision.json file. When no such move exists, creates it. If AI did a mistake, never does it again. If AI did a winning move, does it everytime after. By default it alters between AI and player starting moves unless theres a flag that overwrites it.
+	`)
+	process.exit()
+}
+
+
 const playerMove = (): [Coord, Coord] => {
 	const randMove = (): Coord[] =>
 		new Array(2).fill(null).map(e => Math.floor(Math.random() * 3) as Coord)
