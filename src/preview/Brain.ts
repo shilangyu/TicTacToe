@@ -71,7 +71,7 @@ export default class Brain {
 		const dec = this.brain[board] as FitGuess[]
 
 		let specimen = board.replace(/[10]/g, '    ')
-		if (specimen.indexOf('null') === -1) return
+		if (!specimen.includes('null')) return
 
 		do {
 			let currField = specimen.lastIndexOf('null') / 4
@@ -80,8 +80,8 @@ export default class Brain {
 				y: currField % 3 as Coord,
 				fitness: 100
 			})
-
-			specimen = specimen.replace(/null(?! +)$/, '    ')
-		} while (specimen.indexOf('null') !== -1)
+			
+			specimen = specimen.replace(/null(?<rest> *)$/, '    $<rest>')
+		} while (specimen.includes('null'))
 	}
 }
