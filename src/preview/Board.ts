@@ -10,7 +10,7 @@ export default class Board {
 	tiles: Tile[][]
 	turn: Sign
 
-	constructor(public width: number, public height: number, public mode: 'dev' | 'prod' = 'prod', public signs: Signs = {AI: '○', player: '×'} ) {
+	constructor(public width: number, public height: number, public mode: 'dev' | 'prod' = 'prod', public signs: Signs = { AI: '○', player: '×' }) {
 		this.tiles = new Array(height).fill(null).map((_, y) =>
 			new Array(width).fill(null).map((_, x) =>
 				new Tile(x as Coord, y as Coord, null)
@@ -32,7 +32,7 @@ export default class Board {
 
 	private toggleTurn() {
 		this.turn = 0 ? 1 : 0
-		if(this.mode === 'prod')
+		if (this.mode === 'prod')
 			redraw()
 
 		const outcome = this.win()
@@ -54,8 +54,8 @@ export default class Board {
 
 	get rotations(): string[] {
 		const temp = new Board(3, 3)
-		temp.tiles = this.tiles.map(row => row.map(e => ({...e})))
-		const base = this.tiles.map(row => row.map(e => ({...e})))
+		temp.tiles = this.tiles.map(row => row.map(e => ({ ...e })))
+		const base = this.tiles.map(row => row.map(e => ({ ...e })))
 
 		const result: string[] = []
 		for (let i = 0; i < 4; i++) {
@@ -68,8 +68,8 @@ export default class Board {
 
 	get mirrors(): string[] {
 		const temp = new Board(3, 3)
-		temp.tiles = this.tiles.map(row => row.map(e => ({...e})))
-		const base = this.tiles.map(row => row.map(e => ({...e})))
+		temp.tiles = this.tiles.map(row => row.map(e => ({ ...e })))
+		const base = this.tiles.map(row => row.map(e => ({ ...e })))
 
 		const result: string[] = []
 		for (let i = 0; i < 4; i++) {
@@ -91,7 +91,7 @@ export default class Board {
 	}
 
 	endGame(winner: Sign) {
-		if(this.mode === 'dev') {
+		if (this.mode === 'dev') {
 			console.log(winner === 0 ? 'You won' : winner === 1 ? 'AI won' : 'Draw')
 		} else {
 			(document.querySelector('#msg') as HTMLSpanElement).innerHTML = `
@@ -109,6 +109,7 @@ export default class Board {
 		for (const row of this.tiles) {
 			correct = true
 			model = row[0].sign
+			if (model === null) continue
 			for (const { sign } of row) {
 				if (sign !== model) {
 					correct = false
@@ -122,6 +123,7 @@ export default class Board {
 		for (let i = 0; i < this.tiles.length; i++) {
 			correct = true
 			model = this.tiles[0][i].sign
+			if (model === null) continue
 			for (let j = 0; j < this.tiles[i].length; j++) {
 				if (this.tiles[j][i].sign !== model) {
 					correct = false
@@ -134,26 +136,30 @@ export default class Board {
 
 		correct = true
 		model = this.tiles[0][0].sign
-		for (let i = 0; i < this.tiles.length; i++) {
-			if (this.tiles[i][i].sign !== model) {
-				correct = false
-				break
+		if (model !== null) {
+			for (let i = 0; i < this.tiles.length; i++) {
+				if (this.tiles[i][i].sign !== model) {
+					correct = false
+					break
+				}
 			}
+			if (correct)
+				return model
 		}
-		if (correct)
-			return model
 
 		correct = true
 		model = this.tiles[0][2].sign
-		for (let i = 0; i < this.tiles.length; i++) {
-			if (this.tiles[i][2 - i].sign !== model) {
-				correct = false
-				break
-			}
-		}
-		if (correct)
-			return model
+		if (model !== null) {
 
+			for (let i = 0; i < this.tiles.length; i++) {
+				if (this.tiles[i][2 - i].sign !== model) {
+					correct = false
+					break
+				}
+			}
+			if (correct)
+				return model
+		}
 		return null
 	}
 }
