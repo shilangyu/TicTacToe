@@ -12,7 +12,17 @@ export default class Brain {
 			const key = rotations[i]
 
 			if (key in this.brain) {
-				const { x, y } = (this.mode === 'prod' ? this.brain[key] : (this.brain[key] as FitGuess[]).sort((a, b) => b.fitness - a.fitness)[0]) as Guess
+				let x: Coord, y: Coord
+				if(this.mode === 'prod') {
+					let res = this.brain[key] as Guess
+					x = res.x
+					y = res.y
+				} else {
+					let res = this.brain[key] as FitGuess[]
+					let random = res[Math.floor(Math.random() * res.length)]
+					x = random.x
+					y = random.y
+				}
 				const [mappedX, mappedY] = mapxy(x, y, i, 'rotation')
 				return { x: mappedX as Coord, y: mappedY as Coord}
 			}
@@ -22,7 +32,17 @@ export default class Brain {
 			const key = mirrors[i]
 
 			if (key in this.brain) {
-				const { x, y } = (this.mode === 'prod' ? this.brain[key] : (this.brain[key] as FitGuess[]).sort((a, b) => b.fitness - a.fitness)[0]) as Guess
+				let x: Coord, y: Coord
+				if(this.mode === 'prod') {
+					let res = this.brain[key] as Guess
+					x = res.x
+					y = res.y
+				} else {
+					let res = this.brain[key] as FitGuess[]
+					let random = res[Math.floor(Math.random() * res.length)]
+					x = random.x
+					y = random.y
+				}
 				const [mappedX, mappedY] = mapxy(x, y, i, 'mirror')
 				return { x: mappedX as Coord, y: mappedY as Coord}
 			}
