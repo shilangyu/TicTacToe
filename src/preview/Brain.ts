@@ -7,24 +7,24 @@ export default class Brain {
 		this.brain = {}
 	}
 
-	decide(rotations: string[], mirrors: string[]): Guess {
+	mappedDecisions(rotations: string[], mirrors: string[]): Guess | FitGuess[] {
 		for (let i = 0; i < rotations.length; i++) {
 			const key = rotations[i]
 
 			if (key in this.brain) {
-				let x: Coord, y: Coord
-				if(this.mode === 'prod') {
+				if (this.mode === 'prod') {
 					let res = this.brain[key] as Guess
-					x = res.x
-					y = res.y
+					let [x, y] = mapxy(res.x, res.y, i, 'rotation')
+					return { x, y }
 				} else {
 					let res = this.brain[key] as FitGuess[]
-					let random = res[Math.floor(Math.random() * res.length)]
-					x = random.x
-					y = random.y
+					return res.map(e => {
+						let [x, y] = mapxy(e.x, e.y, i, 'rotation')
+						return {
+							x, y, fitness: e.fitness
+						}
+					})
 				}
-				const [mappedX, mappedY] = mapxy(x, y, i, 'rotation')
-				return { x: mappedX as Coord, y: mappedY as Coord}
 			}
 		}
 
@@ -32,31 +32,38 @@ export default class Brain {
 			const key = mirrors[i]
 
 			if (key in this.brain) {
-				let x: Coord, y: Coord
-				if(this.mode === 'prod') {
+				if (this.mode === 'prod') {
 					let res = this.brain[key] as Guess
-					x = res.x
-					y = res.y
+					let [x, y] = mapxy(res.x, res.y, i, 'mirror')
+					return { x, y }
 				} else {
 					let res = this.brain[key] as FitGuess[]
-					let random = res[Math.floor(Math.random() * res.length)]
-					x = random.x
-					y = random.y
+					return res.map(e => {
+						let [x, y] = mapxy(e.x, e.y, i, 'mirror')
+						return {
+							x, y, fitness: e.fitness
+						}
+					})
 				}
-				const [mappedX, mappedY] = mapxy(x, y, i, 'mirror')
-				return { x: mappedX as Coord, y: mappedY as Coord}
+			}
+		}
+		return { x: -1 as Coord, y: -1 as Coord }
+	}
+
+	decide(rotations: string[], mirrors: string[]): Guess {
+		if (this.mode === 'prod') {
+			const guess = this.mappedDecisions(rotations, mirrors) as Guess
+			return guess
+		} else {
+			const guesses = this.mappedDecisions(rotations, mirrors) as FitGuess[]
+			if(!('x' in guesses)) {
+				const random = guesses[Math.floor(Math.random() * guesses.length)]
+				return { x: random.x, y: random.y }
 			}
 		}
 
-		if(this.mode === 'dev') {
-			this.createMoves(rotations[0])
-			return this.decide(rotations, mirrors)
-		}
-
-		return {
-			x: -1 as Coord,
-			y: -1 as Coord
-		}
+		this.createMoves(rotations[0])
+		return this.decide(rotations, mirrors)
 	}
 
 	private createMoves(board: string) {
@@ -64,7 +71,7 @@ export default class Brain {
 		const dec = this.brain[board] as FitGuess[]
 
 		let specimen = board.replace(/[10]/g, '    ')
-		if(specimen.indexOf('null') === -1) return
+		if (specimen.indexOf('null') === -1) return
 
 		do {
 			let currField = specimen.lastIndexOf('null') / 4
@@ -75,6 +82,6 @@ export default class Brain {
 			})
 
 			specimen = specimen.replace(/null(?! +)$/, '    ')
-		} while(specimen.indexOf('null') !== -1)
+		} while (specimen.indexOf('null') !== -1)
 	}
 }
