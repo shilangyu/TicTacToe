@@ -91,9 +91,7 @@ export default class Board {
 	}
 
 	endGame(winner: Sign) {
-		if (this.mode === 'dev') {
-			console.log(winner === 0 ? 'You won' : winner === 1 ? 'AI won' : 'Draw')
-		} else {
+		if (this.mode === 'prod') {
 			(document.querySelector('#msg') as HTMLSpanElement).innerHTML = `
 				${winner === 0 ? 'You won' : winner === 1 ? 'AI won' : 'Draw'} <br>
 				<button onclick="window.location.reload()"> restart </button>
