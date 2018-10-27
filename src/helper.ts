@@ -57,13 +57,30 @@ export const mirror = (matrix: any[][], how: number): any[][] => {
 	return Array(Array())
 }
 
-export const mapxy = (x: Coord, y: Coord, rotation: 0 | 1 | 2 | 3): Coord[] => {
-	x -= 1
-	y -= 1
-	const ang = (Math.PI / 2) * rotation
-	const cos = Math.cos(ang)
-	const sin = Math.sin(ang)
-	const rotatedX = Math.round(10000 * (x * cos - y * sin)) / 10000 + 1 as Coord
-	const rotatedY = Math.round(10000 * (x * sin + y * cos)) / 10000 + 1 as Coord
-	return [rotatedX, rotatedY]
+export const mapxy = (x: Coord, y: Coord, amount: number, what: 'rotation' | 'mirror'): Coord[] => {
+	if(what === 'rotation') {
+		x -= 1
+		y -= 1
+		const ang = (Math.PI / 2) * amount
+		const cos = Math.cos(ang)
+		const sin = Math.sin(ang)
+		const rotatedX = Math.round(10000 * (x * cos - y * sin)) / 10000 + 1 as Coord
+		const rotatedY = Math.round(10000 * (x * sin + y * cos)) / 10000 + 1 as Coord
+		return [rotatedX, rotatedY]
+	} else {
+		switch (amount) {
+			case 0:
+				return [2 - y as Coord, 2 - x as Coord]
+	
+			case 1:
+				return [y, x]
+
+			case 2:
+				return [x, 2 - y as Coord]
+	
+			case 3:
+				return [2 - x as Coord, y]
+		}
+	}
+	return [1]
 }

@@ -1,3 +1,5 @@
+import { mapxy } from '../helper'
+
 export default class Brain {
 	brain: Decisions;
 
@@ -5,18 +7,14 @@ export default class Brain {
 		this.brain = {}
 	}
 
-	decide(boards: string[]): Guess {
-		for (let i = 0; i < boards.length; i++) {
-			const key = boards[i]
+	decide(rotations: string[]): Guess {
+		for (let i = 0; i < rotations.length; i++) {
+			const key = rotations[i]
 
 			if (key in this.brain) {
 				const { x, y } = (this.mode === 'prod' ? this.brain[key] : (this.brain[key] as FitGuess[]).sort((a, b) => b.fitness - a.fitness)[0]) as Guess
-				const ang = (Math.PI / 2) * i
-				const cos = Math.cos(ang)
-				const sin = Math.sin(ang)
-				const rotatedX = Math.round(10000 * ((x - 1) * cos - (y - 1) * sin)) / 10000
-				const rotatedY = Math.round(10000 * ((x - 1) * sin + (y - 1) * cos)) / 10000
-				return { x: rotatedX+1 as Coord, y: rotatedY+1 as Coord}
+				const [mappedX, mappedY] = mapxy(x, y, i, 'rotation')
+				return { x: mappedX as Coord, y: mappedY as Coord}
 			}
 		}
 
