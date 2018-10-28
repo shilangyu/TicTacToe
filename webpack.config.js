@@ -2,8 +2,8 @@ const [path, fs] = ['path', 'fs'].map(require)
 
 
 fs.writeFileSync(
-  path.join(__dirname, 'public', 'parsed-decision.json'),
-  JSON.stringify(require('./src/trainer/decision.json')),
+  path.join(__dirname, 'public', 'decisions.json'),
+  JSON.stringify(require('./src/trainer/decisions.json')),
   { encoding: 'utf-8' }
 )
 

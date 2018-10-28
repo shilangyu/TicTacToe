@@ -4,7 +4,7 @@ import * as path from 'path'
 import Brain from '../Brain'
 import Board from '../Board'
 import { unmapxy } from '../helper'
-const decision = require('./decision.json')
+const decision = require('./decisions.json')
 
 let board: Board
 const brain = new Brain()
@@ -107,6 +107,6 @@ for (let i = 0; i < games; i++) {
 	}
 }
 
-fs.writeFileSync(path.join(__dirname, 'decision.json'), JSON.stringify(brain.brain, null, 4))
+fs.writeFileSync(path.join(__dirname, 'decisions.json'), JSON.stringify(brain.brain, null, 4))
 
 process.stdout.write(`\rLearned ${def} new defensive moves and ${off} offensive ones.`)

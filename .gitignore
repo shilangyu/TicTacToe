@@ -3,4 +3,4 @@ node_modules/
 build/
 
 public/bundle.js
-public/parsed-decision.json
+public/decisions.json

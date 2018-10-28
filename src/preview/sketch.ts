@@ -14,7 +14,7 @@ const board = new Board(3, 3)
 const brain = new Brain()
 
 ;(window as any).setup = async function () {
-	brain.brain = await (await fetch('./parsed-decision.json')).json()
+	brain.brain = await (await fetch('./decisions.json')).json()
 
 	createCanvas(env.canvasSize.x, env.canvasSize.y)
 	background(env.background)
