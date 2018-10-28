@@ -3,7 +3,7 @@ import * as path from 'path'
 
 import Brain from '../preview/Brain'
 import Board from '../preview/Board'
-import { mapxy } from '../helper'
+import { unmapxy } from '../helper'
 const decision = require('./decision.json')
 
 let board: Board
@@ -72,7 +72,7 @@ for (let i = 0; i < games; i++) {
 					let target = brain.brain[key] as FitGuess[]
 					if (target.length === 1) break
 
-					let [xx, yy] = mapxy(prevX, prevY, i % 4, i < 4 ? 'rotation' : 'mirror')
+					let [xx, yy] = unmapxy(prevX, prevY, i % 4, i < 4 ? 'rotation' : 'mirror')
 
 					target.splice(target.indexOf(target.find(e => e.x === xx && e.y === yy) as FitGuess), 1)
 					def++
@@ -87,9 +87,9 @@ for (let i = 0; i < games; i++) {
 				if (key in brain.brain) {
 					let target = brain.brain[key] as FitGuess[]
 					if (target.length === 1) break
-
-					let [xx, yy] = mapxy(x, y, i % 4, i < 4 ? 'rotation' : 'mirror');
-
+					
+					let [xx, yy] = unmapxy(x, y, i % 4, i < 4 ? 'rotation' : 'mirror');
+					
 					(brain.brain[key] as FitGuess[]) = [{
 						x: xx, y: yy, fitness: 100
 					}]

@@ -59,8 +59,8 @@ export default class Board {
 
 		const result: string[] = []
 		for (let i = 0; i < 4; i++) {
-			result.push(temp.stringified)
 			temp.tiles = rotate(base, i)
+			result.push(temp.stringified)
 		}
 
 		return result

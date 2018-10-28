@@ -1,10 +1,13 @@
 export const rotate = (matrix: any[][], how: number): any[][] => {
 	const N = matrix.length - 1
+	if(how === 0) {
+		return [...matrix.map(e => [...e])]
+	}
 	let result = matrix.map((row, i) =>
 		row.map((_, j) => matrix[N - j][i])
 	)
 
-	for (let i = 0; i < how; i++) {
+	for (let i = 1; i < how; i++) {
 		result = result.map((row, i) =>
 			row.map((_, j) => matrix[N - j][i])
 		)
@@ -64,8 +67,36 @@ export const mapxy = (x: Coord, y: Coord, amount: number, what: 'rotation' | 'mi
 		const ang = (Math.PI / 2) * amount
 		const cos = Math.cos(ang)
 		const sin = Math.sin(ang)
-		const rotatedX = Math.round(10000 * (x * cos - y * sin)) / 10000 + 1 as Coord
-		const rotatedY = Math.round(10000 * (x * sin + y * cos)) / 10000 + 1 as Coord
+		const rotatedX = Math.round(x * cos - y * sin) + 1 as Coord
+		const rotatedY = Math.round(x * sin + y * cos) + 1 as Coord
+		return [rotatedX, rotatedY]
+	} else {
+		switch (amount) {
+			case 0:
+				return [2 - y as Coord, 2 - x as Coord]
+	
+			case 1:
+				return [y, x]
+
+			case 2:
+				return [x, 2 - y as Coord]
+	
+			case 3:
+				return [2 - x as Coord, y]
+		}
+	}
+	return [1]
+}
+
+export const unmapxy = (x: Coord, y: Coord, amount: number, what: 'rotation' | 'mirror'): Coord[] => {
+	if(what === 'rotation') {
+		x -= 1
+		y -= 1
+		const ang = (Math.PI / 2) * (4 - amount)
+		const cos = Math.cos(ang)
+		const sin = Math.sin(ang)
+		const rotatedX = Math.round(x * cos - y * sin) + 1 as Coord
+		const rotatedY = Math.round(x * sin + y * cos) + 1 as Coord
 		return [rotatedX, rotatedY]
 	} else {
 		switch (amount) {
