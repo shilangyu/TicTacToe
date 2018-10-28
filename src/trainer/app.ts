@@ -1,8 +1,8 @@
 import * as fs from 'fs'
 import * as path from 'path'
 
-import Brain from '../preview/Brain'
-import Board from '../preview/Board'
+import Brain from '../Brain'
+import Board from '../Board'
 import { unmapxy } from '../helper'
 const decision = require('./decision.json')
 

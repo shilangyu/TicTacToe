@@ -1,4 +1,4 @@
-import { mapxy } from '../helper'
+import { mapxy } from './helper'
 
 export default class Brain {
 	brain: Decisions;

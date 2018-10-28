@@ -1,5 +1,5 @@
-import Brain from './Brain'
-import Board from './Board'
+import Brain from '../Brain'
+import Board from '../Board'
 
 const env = {
 	scale: 150,

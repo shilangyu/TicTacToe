@@ -1,5 +1,4 @@
-import Tile from './Tile'
-import { rotate, mirror } from '../helper'
+import { rotate, mirror } from './helper'
 
 interface Signs {
 	AI: string
@@ -12,9 +11,9 @@ export default class Board {
 
 	constructor(public width: number, public height: number, public mode: 'dev' | 'prod' = 'prod', public signs: Signs = { AI: '○', player: '×' }) {
 		this.tiles = new Array(height).fill(null).map((_, y) =>
-			new Array(width).fill(null).map((_, x) =>
-				new Tile(x as Coord, y as Coord, null)
-			)
+			new Array(width).fill(null).map((_, x) => ({
+				x, y, sign: null
+			}) as Tile)
 		)
 		this.turn = 0
 	}
