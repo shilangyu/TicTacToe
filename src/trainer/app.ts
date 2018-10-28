@@ -7,7 +7,7 @@ import { unmapxy } from '../helper'
 const decision = require('./decision.json')
 
 let board: Board
-const brain = new Brain('dev')
+const brain = new Brain()
 brain.brain = decision
 
 const games = Number(process.argv[2])

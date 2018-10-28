@@ -19,5 +19,5 @@ declare interface Guess {
 
 // object containing the whole brain
 declare interface Decisions {
-	[key: string]: Guess | FitGuess[]
+	[key: string]: FitGuess[]
 }
