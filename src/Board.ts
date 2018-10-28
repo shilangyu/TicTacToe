@@ -6,21 +6,19 @@ interface Signs {
 }
 
 export default class Board {
-	tiles: Tile[][]
+	tiles: Sign[][]
 	turn: Sign
 
 	constructor(public width: number, public height: number, public mode: 'dev' | 'prod' = 'prod', public signs: Signs = { AI: '○', player: '×' }) {
 		this.tiles = new Array(height).fill(null).map((_, y) =>
-			new Array(width).fill(null).map((_, x) => ({
-				x, y, sign: null
-			}) as Tile)
+			new Array(width).fill(null)
 		)
 		this.turn = 0
 	}
 
 	draw(scale: number, size: { x: number, y: number }) {
-		this.tiles.forEach(row =>
-			row.forEach(({ x, y, sign }) => {
+		this.tiles.forEach((row, y) =>
+			row.forEach((sign , x) => {
 				const txt = sign === null ? '' : sign === 0 ? this.signs.player : this.signs.AI
 				text(txt, scale * (x + 1 / 2), scale * (y + 1 / 2))
 				line(scale * x, 0, scale * x, size.y)
@@ -40,12 +38,12 @@ export default class Board {
 	}
 
 	get full() {
-		return this.tiles.every(row => row.every(cell => cell.sign !== null))
+		return this.tiles.every(row => row.every(sign => sign !== null))
 	}
 
 	get stringified(): string {
 		return this.tiles
-			.map(row => row.map(({ sign }) => sign))
+			.map(row => row.map(sign => sign))
 			.reduce((prev, curr) => [...prev, ...curr], [])
 			.map(String)
 			.join('')
@@ -53,8 +51,8 @@ export default class Board {
 
 	get rotations(): string[] {
 		const temp = new Board(3, 3)
-		temp.tiles = this.tiles.map(row => row.map(e => ({ ...e })))
-		const base = this.tiles.map(row => row.map(e => ({ ...e })))
+		temp.tiles = this.tiles.map(row => row.map(sign => sign))
+		const base = this.tiles.map(row => row.map(sign => sign))
 
 		const result: string[] = []
 		for (let i = 0; i < 4; i++) {
@@ -67,8 +65,8 @@ export default class Board {
 
 	get mirrors(): string[] {
 		const temp = new Board(3, 3)
-		temp.tiles = this.tiles.map(row => row.map(e => ({ ...e })))
-		const base = this.tiles.map(row => row.map(e => ({ ...e })))
+		temp.tiles = this.tiles.map(row => row.map(sign => sign))
+		const base = this.tiles.map(row => row.map(sign => sign))
 
 		const result: string[] = []
 		for (let i = 0; i < 4; i++) {
@@ -80,12 +78,12 @@ export default class Board {
 	}
 
 	playerMove(x: Coord, y: Coord) {
-		this.tiles[x][y].sign = 0
+		this.tiles[x][y] = 0
 		this.toggleTurn()
 	}
 
 	aiMove(x: Coord, y: Coord) {
-		this.tiles[x][y].sign = 1
+		this.tiles[x][y] = 1
 		this.toggleTurn()
 	}
 
@@ -105,9 +103,9 @@ export default class Board {
 
 		for (const row of this.tiles) {
 			correct = true
-			model = row[0].sign
+			model = row[0]
 			if (model === null) continue
-			for (const { sign } of row) {
+			for (const sign of row) {
 				if (sign !== model) {
 					correct = false
 					break
@@ -119,10 +117,10 @@ export default class Board {
 
 		for (let i = 0; i < this.tiles.length; i++) {
 			correct = true
-			model = this.tiles[0][i].sign
+			model = this.tiles[0][i]
 			if (model === null) continue
 			for (let j = 0; j < this.tiles[i].length; j++) {
-				if (this.tiles[j][i].sign !== model) {
+				if (this.tiles[j][i] !== model) {
 					correct = false
 					break
 				}
@@ -132,10 +130,10 @@ export default class Board {
 		}
 
 		correct = true
-		model = this.tiles[0][0].sign
+		model = this.tiles[0][0]
 		if (model !== null) {
 			for (let i = 0; i < this.tiles.length; i++) {
-				if (this.tiles[i][i].sign !== model) {
+				if (this.tiles[i][i] !== model) {
 					correct = false
 					break
 				}
@@ -145,11 +143,11 @@ export default class Board {
 		}
 
 		correct = true
-		model = this.tiles[0][2].sign
+		model = this.tiles[0][2]
 		if (model !== null) {
 
 			for (let i = 0; i < this.tiles.length; i++) {
-				if (this.tiles[i][2 - i].sign !== model) {
+				if (this.tiles[i][2 - i] !== model) {
 					correct = false
 					break
 				}

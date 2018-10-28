@@ -2,14 +2,7 @@
 declare type Coord = 0 | 1 | 2
 
 // sign representing the signs on a given tile
-declare type Sign = (0 | 1 | null)
-
-// fields describing a tile
-declare interface Tile {
-	x: Coord,
-	y: Coord,
-	sign: Sign
-}
+declare type Sign = 0 | 1 | null
 
 // pre-prased decision guesses
 declare interface FitGuess {

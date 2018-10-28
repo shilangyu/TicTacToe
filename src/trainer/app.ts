@@ -29,10 +29,10 @@ Description:
 }
 
 
-const playerMove = (board: Tile[][]): [Coord, Coord] => {
+const playerMove = (board: Sign[][]): [Coord, Coord] => {
 	let choices: number[][] = []
-	board.flat().forEach((e, i) => {
-		if(e.sign === null)
+	board.flat().forEach((sign, i) => {
+		if(sign === null)
 			choices.push([Math.floor(i / 3), i % 3])
 	})
 
