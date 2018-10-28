@@ -8,33 +8,20 @@ export default class Brain {
 	}
 
 	mappedDecisions(rotations: string[], mirrors: string[]): FitGuess[] {
-		for (let i = 0; i < rotations.length; i++) {
-			const key = rotations[i]
-
+		let i = 0
+		for (const key of [...rotations, ...mirrors]) {
 			if (key in this.brain) {
 				let res = this.brain[key]
 				return res.map(e => {
-					let [x, y] = mapxy(e.x, e.y, i, 'rotation')
+					let [x, y] = mapxy(e.x, e.y, i % 4, i < 4 ? 'rotation' : 'mirror')
 					return {
 						x, y, fitness: e.fitness
 					}
 				})
 			}
+			i++
 		}
 
-		for (let i = 0; i < mirrors.length; i++) {
-			const key = mirrors[i]
-
-			if (key in this.brain) {
-				let res = this.brain[key]
-				return res.map(e => {
-					let [x, y] = mapxy(e.x, e.y, i, 'mirror')
-					return {
-						x, y, fitness: e.fitness
-					}
-				})
-			}
-		}
 		return []
 	}
 
