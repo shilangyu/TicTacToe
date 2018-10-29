@@ -32,7 +32,7 @@ Description:
 const playerMove = (board: Sign[][]): [Coord, Coord] => {
 	let choices: number[][] = []
 	board.flat().forEach((sign, i) => {
-		if(sign === null)
+		if (sign === null)
 			choices.push([Math.floor(i / 3), i % 3])
 	})
 
@@ -40,11 +40,24 @@ const playerMove = (board: Sign[][]): [Coord, Coord] => {
 	return [x, y]
 }
 
+const starting = function () {
+	let starter: () => 0 | 1
+	if (process.argv.includes('--player'))
+		starter = () => 0
+	else if (process.argv.includes('--AI'))
+		starter = () => 1
+	else
+		starter = () => Math.floor(Math.random() * 2) as 0 | 1
+
+	return starter
+}()
+
+
 let off = 0, def = 0
 for (let i = 0; i < games; i++) {
 	process.stdout.write(`\r${(i / games * 100).toFixed(2).padStart(5)}%`)
 	board = new Board(3, 3, 'dev')
-	let moves = 0
+	let moves = starting()
 
 	let prevX: Coord = 0, prevY: Coord = 0
 	let prevRotations: string[] = [], prevMirrors: string[] = []
@@ -87,9 +100,9 @@ for (let i = 0; i < games; i++) {
 				if (key in brain.brain) {
 					let target = brain.brain[key] as FitGuess[]
 					if (target.length === 1) break
-					
+
 					let [xx, yy] = unmapxy(x, y, i % 4, i < 4 ? 'rotation' : 'mirror');
-					
+
 					(brain.brain[key] as FitGuess[]) = [{
 						x: xx, y: yy, fitness: 100
 					}]
