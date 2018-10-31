@@ -9,7 +9,7 @@ Runs in the browser using [p5](https://p5js.org) as the canvas drawer. The previ
 [Try it out](https://shilangyu.github.io/TicTacToe) and see if you can beat it :)
 
 ### Trainer
-To train the json file simply run `npm run train <amount of games>`. The AI bases every move on the current tictactoe board. Each board can be represented in 8 same states: 4 rotations and 4 mirrors, which in result cuts the amount of possible combinations by a factor of 8. Heres how the AI learns:
+To train the json file simply run `npm run train -- <amount of games> <?flag>`. The AI bases every move on the current tictactoe board. Each board can be represented in 8 same states: 4 rotations and 4 mirrors, which in result cuts the amount of possible combinations by a factor of 8. Heres how the AI learns:
 
 1. Parse the current board into string
 2. Rotate the string and mirror it (we have now 8 strings representing the same board)

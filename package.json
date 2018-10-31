@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run build && http-server ./public",
     "train": "ts-node --files src/trainer/app.ts",
-    "build": "tsc && webpack --config webpack.config.js",
+    "build": "tsc && webpack --config webpack.config.js --arg",
     "predeploy": "npm run build",
     "deploy": "ts-node --files src/deploy/deploy.ts"
   },
