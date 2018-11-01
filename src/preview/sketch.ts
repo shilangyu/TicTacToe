@@ -5,6 +5,7 @@ const env = {
 	scale: 150,
 	background: 151,
 	msg: document.querySelector('#msg') as HTMLSpanElement,
+	restart: document.querySelector('#restart') as HTMLButtonElement,
 	canvas: {
 		ref: document.createElement('canvas'),
 		size: {
@@ -14,7 +15,7 @@ const env = {
 	}
 }
 
-const board = new Board(3, 3)
+let board = new Board(3, 3)
 const brain = new Brain()
 
 ;(window as any).setup = async function () {
@@ -49,9 +50,15 @@ const brain = new Brain()
 			}
 		}
 	})
+
+	env.restart.addEventListener('click', () => {
+		board = new Board(3, 3)
+		env.msg.innerHTML = ''
+	})
 }
 
 ;(window as any).draw = function () {
+	background(env.background)
 	const { scale, canvas: { size } } = env
 
 	board.tiles.forEach((row, y) =>
