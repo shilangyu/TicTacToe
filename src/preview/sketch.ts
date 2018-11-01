@@ -4,9 +4,13 @@ import Board from '../Board'
 const env = {
 	scale: 150,
 	background: 151,
-	canvasSize: {
-		x: 450,
-		y: 450
+	msg: document.querySelector('#msg') as HTMLSpanElement,
+	canvas: {
+		ref: document.createElement('canvas'),
+		size: {
+			x: 450,
+			y: 450
+		}
 	}
 }
 
@@ -16,7 +20,7 @@ const brain = new Brain()
 ;(window as any).setup = async function () {
 	brain.brain = await (await fetch('./decisions.json')).json()
 
-	createCanvas(env.canvasSize.x, env.canvasSize.y)
+	createCanvas(env.canvas.size.x, env.canvas.size.y)
 	background(env.background)
 
 	textAlign(CENTER, CENTER)
@@ -25,22 +29,41 @@ const brain = new Brain()
 	stroke(255)
 	fill(255)
 
-	noLoop()
+	env.canvas.ref = document.querySelector('canvas') as HTMLCanvasElement
 
-	;(document.querySelector('canvas') as HTMLCanvasElement).addEventListener('click', ({ clientX: x, clientY: y, target }) => {
+	env.canvas.ref.addEventListener('click', ({ layerX: x, layerY: y, target }) => {
 		const { clientHeight: canvasHeight, clientWidth: canvasWidth } = (target as HTMLElement)
 
 		const grid = [x / (canvasWidth / board.width), y / (canvasHeight / board.height)].map(e => Math.floor(e) as Coord)
 
 		if (board.turn === 0 && board.tiles[grid[1]][grid[0]] === null) {
-			board.playerMove(grid[1], grid[0])
+			const playerWon = board.playerMove(grid[1], grid[0])
+			if(playerWon) endGame(0)
+			if(board.full) endGame(null)
 
-			const { x, y } = brain.decide(board.rotations, board.mirrors)
-			board.aiMove(x, y)
+			if(!playerWon) {
+				const { x, y } = brain.decide(board.rotations, board.mirrors)
+				const AIWon = board.aiMove(x, y)
+				if(AIWon) endGame(1)
+				if(board.full) endGame(null)
+			}
 		}
 	})
 }
 
 ;(window as any).draw = function () {
-	board.draw(env.scale, env.canvasSize)
+	const { scale, canvas: { size } } = env
+
+	board.tiles.forEach((row, y) =>
+		row.forEach((sign , x) => {
+			const txt = sign === null ? '' : sign === 0 ? board.signs.player : board.signs.AI
+			text(txt, scale * (x + 1 / 2), scale * (y + 1 / 2))
+			line(scale * x, 0, scale * x, size.y)
+			line(0, scale * y, size.x, scale * y)
+		})
+	)
+}
+
+function endGame(winner: Sign) {
+	env.msg.innerHTML = winner === 0 ? 'You won' : winner === 1 ? 'AI won' : 'Draw'
 }

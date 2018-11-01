@@ -9,32 +9,11 @@ export default class Board {
 	tiles: Sign[][]
 	turn: Sign
 
-	constructor(public width: number, public height: number, public mode: 'dev' | 'prod' = 'prod', public signs: Signs = { AI: '○', player: '×' }) {
+	constructor(public width: number, public height: number, public signs: Signs = { AI: '○', player: '×' }) {
 		this.tiles = new Array(height).fill(null).map((_, y) =>
 			new Array(width).fill(null)
 		)
 		this.turn = 0
-	}
-
-	draw(scale: number, size: { x: number, y: number }) {
-		this.tiles.forEach((row, y) =>
-			row.forEach((sign , x) => {
-				const txt = sign === null ? '' : sign === 0 ? this.signs.player : this.signs.AI
-				text(txt, scale * (x + 1 / 2), scale * (y + 1 / 2))
-				line(scale * x, 0, scale * x, size.y)
-				line(0, scale * y, size.x, scale * y)
-			})
-		)
-	}
-
-	private toggleTurn() {
-		this.turn = 0 ? 1 : 0
-		if (this.mode === 'prod')
-			redraw()
-
-		const outcome = this.win()
-		if (outcome !== null || this.full)
-			this.endGame(outcome)
 	}
 
 	get full() {
@@ -77,24 +56,26 @@ export default class Board {
 		return result
 	}
 
-	playerMove(x: Coord, y: Coord) {
-		this.tiles[x][y] = 0
+	playerMove(x: Coord, y: Coord): boolean {
+		this.move(x, y, 0)
+		return this.win() === 0
+	}
+
+	aiMove(x: Coord, y: Coord): boolean {
+		this.move(x, y, 1)
+		return this.win() === 1
+	}
+
+	private move(x: Coord, y: Coord, whose: Sign) {
+		this.tiles[x][y] = whose
 		this.toggleTurn()
 	}
 
-	aiMove(x: Coord, y: Coord) {
-		this.tiles[x][y] = 1
-		this.toggleTurn()
-	}
-
-	endGame(winner: Sign) {
-		if (this.mode === 'prod') {
-			(document.querySelector('#msg') as HTMLSpanElement).innerHTML = `
-				${winner === 0 ? 'You won' : winner === 1 ? 'AI won' : 'Draw'} <br>
-				<button onclick="window.location.reload()"> restart </button>
-			`
-		}
-		this.turn = 1
+	private toggleTurn() {
+		if(this.win() === null && !this.full)
+			this.turn = this.turn ? 0 : 1
+		else 
+			this.turn = null
 	}
 
 	win(): Sign {
