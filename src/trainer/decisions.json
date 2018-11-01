@@ -2881,5 +2881,3397 @@
             "y": 2,
             "fitness": 100
         }
+    ],
+    "nullnullnullnullnullnullnullnullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "1null0nullnullnullnullnullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "100nullnull1nullnullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "1000null11nullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "1000null1101": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnullnull1nullnull0nullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "01null1nullnull0nullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "01011null0nullnull": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "null0nullnullnullnullnull1null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "00nullnull1nullnull1null": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "00null11null01null": [
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "nullnullnullnullnull0nullnull1": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnullnullnull00null11": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnullnull100011": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null01100011": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnull1nullnullnull0nullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnull1nullnull100null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "0null11null100null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null1nullnull0nullnullnullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "11nullnull0nullnullnull0": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "11nullnull0null010": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "11null001010": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "nullnull1nullnull10null0": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "0null1nullnull1010": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "1nullnullnullnullnull010": [
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "11null0nullnull010": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "1100null1010": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "11null100nullnull0": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "1nullnull10null0nullnull": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "1nullnull1010null0": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "null0nullnullnull11null0": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null0null1null1100": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnull0nullnullnullnull1null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null0011nullnull10": [
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null0nullnull1nullnull10": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "10null01nullnull10": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "10101null010": [
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "01nullnullnull10nullnull": [
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "01nullnull110null0": [
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnullnullnull1nullnull0null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null1nullnull10null0null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "01nullnull1010null": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "nullnull0null01null1null": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "010null01null1null": [
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "0100null1nullnull1": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnullnullnull1null0nullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnull1null1null0null0": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnull1null10010": [
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnullnullnullnull0101": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null0null1null0101": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "1nullnullnullnullnull100": [
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "1null0null1null100": [
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnullnull1null1null00": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "01null1null1null00": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "01nullnull0nullnullnull1": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "01null00null1null1": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "0100011null1": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnullnullnull011null0": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnullnull101100": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "0null11null10null0": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "1null00null1nullnullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "1null00null10null1": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "null01nullnullnull10null": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "null01nullnull0101": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "null0nullnullnull1nullnullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null0null1null1null0null": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "01null1100nullnull": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "0101100null1": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnull1null0nullnullnullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnull1001nullnullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "0null10011nullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null1null01nullnullnull0": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "11null010nullnull0": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "0nullnull1null0nullnull1": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "0nullnull1null0101": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "0null1100101": [
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "null1011null00null": [
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "101null00110": [
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "010nullnullnullnull1null": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "null1null00null1nullnull": [
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "nullnullnull01null10null": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "1null0nullnullnullnull10": [
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null0nullnullnull0null11": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "00null1null0null11": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "001100null11": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnullnull1null10null0": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnull01null1010": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnull10null10nullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "1nullnullnullnull0nullnullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnull1null1nullnull00": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnull0null1null0null1": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnull0null10011": [
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "null00110011": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "1null0011nullnull0": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "110011null00": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnullnull0null110null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "10null011100": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "1null001null01null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "1nullnull0null01nullnull": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "01010nullnullnull1": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null0nullnull1null10null": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null0nullnull11100": [
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "10nullnull0null110": [
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null0nullnullnull110null": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnullnull010101": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "nullnull110nullnull0null": [
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "01110nullnull0null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null0nullnullnull101null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null0null10101null": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "0null1null0null1nullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "00110null1nullnull": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "0nullnullnullnull10null1": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "0null0nullnull1011": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "1null0nullnullnull0null1": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "100nullnull10null1": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "1nullnullnullnull0null10": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "1null1nullnull0010": [
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnull01null0nullnull1": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnull01001null1": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "null1null10nullnull0null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null0110null01null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null0null1nullnull10null": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null0null11null100": [
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "nullnullnullnull1001null": [
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnull011001null": [
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "10nullnullnullnull10null": [
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "100nullnullnull101": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "0nullnullnull10nullnull1": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "0nullnullnull10101": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "01nullnullnullnullnull10": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "10nullnull0nullnull1null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "10null10nullnull10": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "10null101010": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null100null1nullnullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null100null1null01": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null11nullnull0nullnull0": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "1null001nullnull10": [
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "10001null110": [
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "1null0null1001null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "0011null01nullnull": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnull0nullnull10null1": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "null10nullnull1001": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "010null11001": [
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnull1nullnull1null00": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "0nullnull10null101": [
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnull0null0nullnull11": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "110null00null1null": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnullnull01null01null": [
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "001null1null01null": [
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null11null01null00": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "10010nullnull1null": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null0nullnullnullnull011": [
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "1null1null0nullnull0null": [
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "null0null0null11nullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null0null00111null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "1100null1nullnull0": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "1100011null0": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnull01nullnull0null1": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "1null10nullnull001": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "0nullnull0111null0": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "01null011100": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "1nullnullnullnull00null1": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "null011001nullnull": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnullnullnull1null001": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null0null101nullnullnull": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "00null101nullnull1": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "0nullnullnullnull01null1": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "01nullnull001null1": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnull0null110nullnull": [
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "1null1nullnullnullnull00": [
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnull0null10null1null": [
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "1nullnullnullnull100null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "11nullnull0100null": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "11001nullnullnull0": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "11null0nullnullnullnull0": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "001110nullnullnull": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "0null11001nullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "01110010null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "0nullnull10null011": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null1null0null1null0null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "0100null1101": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "null001nullnull011": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnullnull1null01null0": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnullnull110100": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null101null0null01": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "010110null01": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "1nullnull0nullnullnull01": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "11null0null0null01": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null110nullnullnullnull0": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null0nullnull1null0null1": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "00nullnull110null1": [
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null1null1nullnullnull00": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null1null110null00": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "0110null1null0null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "01100110null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null1nullnull0null0null1": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null011nullnull0nullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnullnullnull100null1": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnull10100null1": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null01010011": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "1nullnullnullnull0null01": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "null11001nullnull0": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "10nullnullnull01nullnull": [
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "101nullnull01null0": [
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "110null001nullnull": [
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null010110nullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "100nullnullnullnullnull1": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "01null11null0null0": [
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "1null00null1null01": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnull0110null01": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "00null110null1null": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "11nullnull0010null": [
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "0nullnullnull1null01null": [
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "00nullnull1null011": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "101001nullnullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "1100nullnull0null1": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "1100null0011": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnullnull00null1null1": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnullnullnull0011null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "0null1nullnullnull0null1": [
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "0null11null00null1": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "011nullnull0nullnullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "0null1nullnull0nullnull1": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "01null10nullnullnullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "1010null0null1null": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "0011nullnullnull10": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "null01null11null00": [
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "100null10null1null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "0nullnull11null0nullnull": [
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null1null10null001": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "1null011null0null0": [
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "0null01nullnull101": [
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "0null0101101": [
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "null110null01null0": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnullnull1010nullnull": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "00100111null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "1010nullnull1null0": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnull100null110": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "00null11null0null1": [
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null0null01nullnullnull1": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null0null01null101": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "0null010null11null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "01010011null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "1null1010010": [
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnull00null1011": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnull00110null1": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null0nullnull10110": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null0111nullnull00": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "0null1100nullnull1": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "11null01null0null0": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "0010nullnullnull11": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnull10null1null0null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "011011null00": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "01nullnull0101null": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null1010nullnull01": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "0nullnullnull01101": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null1null10100null": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null1null0null0011": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "null00null110null1": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "0null0null0111null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null1null010nullnullnull": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "0nullnullnull01null1null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "nullnull101null0nullnull": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "01null1null0null01": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "0null1nullnull0null1null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "null1nullnullnull1null00": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "1null10null010null": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "0null1011null0null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "10nullnull0nullnullnull1": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "0nullnull1null1null0null": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "0010null1110": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "1null10100nullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "1null1null0100null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null1100null1null0": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "1011nullnullnull00": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "0nullnull11010null": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "0nullnullnull110nullnull": [
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null100null011null": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "0101nullnullnull10": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "null01100nullnull1": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "null001nullnull110": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null10011null0null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "010null1null0null1": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "1null0null0null1nullnull": [
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "1null0null0null101": [
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "11nullnull10null00": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null111null00null0": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "01nullnullnull1nullnull0": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnull1null10null0null": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "1null1010null0null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null100nullnull011": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "1100null01nullnull": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "1null110null0null0": [
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "nullnull010110null": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "0nullnull1null1100": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "1nullnull0null1001": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "1null00null1null10": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "110nullnull010null": [
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "0011null0110": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "01null1null001null": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "null000111nullnull": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "100nullnull1null10": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "1null100null0null1": [
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "10null001null1null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "00null0null111null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null00null0111null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "1null10null001null": [
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "null10null01null10": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "10101100null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "0nullnull01null101": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null01010null1null": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "00null1null101null": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "10null0null11null0": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null11null001null0": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "nullnull10null0110": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "null11010null0null": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "0101nullnull0null1": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "0null110null0null1": [
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "0nullnullnullnull1null10": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "10100nullnullnull1": [
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "101null0nullnullnullnull": [
+        {
+            "x": 2,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "1nullnull001null01": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "001nullnull0null11": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null1000nullnull11": [
+        {
+            "x": 2,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "null0null001null11": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "11null1null0null00": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "00nullnull101null1": [
+        {
+            "x": 0,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null1null00null110": [
+        {
+            "x": 0,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "1null11null00null0": [
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "0null01null1null01": [
+        {
+            "x": 1,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "101null00nullnull1": [
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "0null10null110null": [
+        {
+            "x": 2,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "null0111null00null": [
+        {
+            "x": 1,
+            "y": 2,
+            "fitness": 100
+        }
+    ],
+    "1null1null10null00": [
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
+    ],
+    "0null1null100null1": [
+        {
+            "x": 1,
+            "y": 0,
+            "fitness": 100
+        }
+    ],
+    "1null1null0010null": [
+        {
+            "x": 0,
+            "y": 1,
+            "fitness": 100
+        }
     ]
 }
