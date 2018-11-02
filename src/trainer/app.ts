@@ -56,7 +56,7 @@ const starting = function () {
 let off = 0, def = 0
 for (let i = 0; i < games; i++) {
 	process.stdout.write(`\r${(i / games * 100).toFixed(2).padStart(5)}%`)
-	board = new Board(3, 3)
+	board = new Board(3, 3, starting())
 	let moves = starting()
 
 	let prevX: Coord = 0, prevY: Coord = 0

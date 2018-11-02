@@ -12,13 +12,24 @@ const env = {
 			x: 450,
 			y: 450
 		}
-	}
+	},
+	starting: function (): () => string {
+		let nodes = Array.from(document.querySelectorAll('input[name=starting]')) as HTMLInputElement[]
+
+		return (): string => {
+			for(const radio of nodes)
+				if(radio.checked)
+					return radio.value
+			return ''
+		}
+	}()
 }
 
-let board = new Board(3, 3)
+let board: Board
 const brain = new Brain()
 
 ;(window as any).setup = async function () {
+	restartGame()
 	brain.brain = await (await fetch('./decisions.json')).json()
 
 	createCanvas(env.canvas.size.x, env.canvas.size.y)
@@ -51,10 +62,7 @@ const brain = new Brain()
 		}
 	})
 
-	env.restart.addEventListener('click', () => {
-		board = new Board(3, 3)
-		env.msg.innerHTML = ''
-	})
+	env.restart.addEventListener('click', restartGame)
 }
 
 ;(window as any).draw = function () {
@@ -73,4 +81,13 @@ const brain = new Brain()
 
 function endGame(winner: Sign) {
 	env.msg.innerHTML = winner === 0 ? 'You won' : winner === 1 ? 'AI won' : 'Draw'
+}
+
+function restartGame() {
+	board = new Board(3, 3, env.starting() === 'AI' ? 1 : 0)
+	if(env.starting() === 'AI') {
+		const { x, y } = brain.decide(board.rotations, board.mirrors)
+		board.aiMove(x, y)
+	}
+	env.msg.innerHTML = ''
 }

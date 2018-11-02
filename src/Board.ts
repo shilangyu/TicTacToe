@@ -9,11 +9,11 @@ export default class Board {
 	tiles: Sign[][]
 	turn: Sign
 
-	constructor(public width: number, public height: number, public signs: Signs = { AI: '○', player: '×' }) {
+	constructor(public width: number, public height: number, starting: Sign = 0, public signs: Signs = { AI: '○', player: '×' }) {
 		this.tiles = new Array(height).fill(null).map((_, y) =>
 			new Array(width).fill(null)
 		)
-		this.turn = 0
+		this.turn = starting
 	}
 
 	get full() {
