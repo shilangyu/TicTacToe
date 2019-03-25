@@ -7,12 +7,20 @@ Project where I created a trainer and a previewer of a TicTacToe AI. This projec
 
 ### Preview
 
+- `npm start`
+- open browser in `localhost:8080`
+
 Runs in the browser and draws the board on a canvas. The preview uses the previously trained json file as the "brain" of the AI.
 [Try it out](https://shilangyu.github.io/TicTacToe) and see if you can beat it :)
 
 ### Trainer
 
-To train the json file simply run `npm run train -- <amount of games> <?flag>`. The AI bases every move on the current tictactoe board. Each board can be represented in 8 same states: 4 rotations and 4 mirrors, which in result cuts the amount of possible combinations by a factor of 8. Heres how the AI learns:
+- `npm run train -- <amount of games> <flag?>`
+
+  - `--player` AI will learn games where the player starts
+  - `--AI` AI will learn games where the AI starts
+
+The AI bases every move on the current tictactoe board. Each board can be represented in 8 same states: 4 rotations and 4 mirrors, which in result cuts the amount of possible combinations by a factor of 8. Heres how the AI learns:
 
 1. Parse the current board into string
 2. Rotate the string and mirror it (we have now 8 strings representing the same board)
