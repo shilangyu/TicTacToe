@@ -2,7 +2,6 @@
 	"name": "tictactoe",
 	"version": "1.0.0",
 	"description": "A simple tictactoe game with a trained AI",
-	"main": "app.js",
 	"scripts": {
 		"start": "npm run build && live-server ./public",
 		"dev": "concurrently \"webpack --watch\" \"live-server ./public\"",
@@ -13,9 +12,13 @@
 		"type": "git",
 		"url": "git+https://github.com/shilangyu/TicTacToe.git"
 	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
+	"keywords": [
+		"tictactoe",
+		"ttt-ai",
+		"tictactoe-ai"
+	],
+	"author": "Marcin Wojnarowski (@shilangyu)",
+	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/shilangyu/TicTacToe/issues"
 	},
