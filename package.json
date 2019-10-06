@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "npm run build && http-server ./public",
 		"train": "ts-node --files src/trainer/app.ts",
-		"build": "tsc && webpack --config webpack.config.js --arg",
+		"build": "webpack",
 		"predeploy": "npm run build",
 		"deploy": "ts-node --files src/deploy/deploy.ts"
 	},
@@ -23,7 +23,9 @@
 	"homepage": "https://github.com/shilangyu/TicTacToe#readme",
 	"devDependencies": {
 		"@types/node": "^12.7.11",
+		"@types/webpack": "^4.39.2",
 		"http-server": "^0.11.1",
+		"ts-loader": "^6.2.0",
 		"ts-node": "^8.4.1",
 		"typescript": "^3.6.3",
 		"webpack": "^4.41.0",
