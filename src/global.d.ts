@@ -6,14 +6,14 @@ declare type Sign = 0 | 1 | null
 
 // pre-prased decision guesses
 declare interface FitGuess {
-	x: Coord,
-	y: Coord,
+	x: Coord
+	y: Coord
 	fitness: number
 }
 
 // parsed decision guess
 declare interface Guess {
-	x: Coord,
+	x: Coord
 	y: Coord
 }
 

@@ -1,7 +1,7 @@
 import { mapxy } from './helper'
 
 export default class Brain {
-	brain: Decisions;
+	brain: Decisions
 
 	constructor() {
 		this.brain = {}
@@ -15,7 +15,9 @@ export default class Brain {
 				return res.map(e => {
 					let [x, y] = mapxy(e.x, e.y, i % 4, i < 4 ? 'rotation' : 'mirror')
 					return {
-						x, y, fitness: e.fitness
+						x,
+						y,
+						fitness: e.fitness
 					}
 				})
 			}
@@ -27,7 +29,7 @@ export default class Brain {
 
 	decide(rotations: string[], mirrors: string[]): Guess {
 		const guesses = this.mappedDecisions(rotations, mirrors)
-		if(guesses.length) {
+		if (guesses.length) {
 			return guesses[Math.floor(Math.random() * guesses.length)]
 		}
 
@@ -46,10 +48,10 @@ export default class Brain {
 			let currField = specimen.lastIndexOf('null') / 4
 			dec.push({
 				x: Math.floor(currField / 3) as Coord,
-				y: currField % 3 as Coord,
+				y: (currField % 3) as Coord,
 				fitness: 100
 			})
-			
+
 			specimen = specimen.replace(/null(?<rest> *)$/, '    $<rest>')
 		} while (specimen.includes('null'))
 	}

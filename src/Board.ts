@@ -1,4 +1,4 @@
-import { rotate, mirror } from './helper'
+import { mirror, rotate } from './helper'
 
 interface Signs {
 	AI: string
@@ -9,10 +9,13 @@ export default class Board {
 	tiles: Sign[][]
 	turn: Sign
 
-	constructor(public width: number, public height: number, starting: Sign = 0, public signs: Signs = { AI: '○', player: '×' }) {
-		this.tiles = new Array(height).fill(null).map((_, y) =>
-			new Array(width).fill(null)
-		)
+	constructor(
+		public width: number,
+		public height: number,
+		starting: Sign = 0,
+		public signs: Signs = { AI: '○', player: '×' }
+	) {
+		this.tiles = new Array(height).fill(null).map(() => new Array(width).fill(null))
 		this.turn = starting
 	}
 
@@ -72,10 +75,8 @@ export default class Board {
 	}
 
 	private toggleTurn() {
-		if(this.win() === null && !this.full)
-			this.turn = this.turn ? 0 : 1
-		else 
-			this.turn = null
+		if (this.win() === null && !this.full) this.turn = this.turn ? 0 : 1
+		else this.turn = null
 	}
 
 	win(): Sign {
@@ -92,8 +93,7 @@ export default class Board {
 					break
 				}
 			}
-			if (correct)
-				return model
+			if (correct) return model
 		}
 
 		for (let i = 0; i < this.tiles.length; i++) {
@@ -106,8 +106,7 @@ export default class Board {
 					break
 				}
 			}
-			if (correct)
-				return model
+			if (correct) return model
 		}
 
 		correct = true
@@ -119,22 +118,19 @@ export default class Board {
 					break
 				}
 			}
-			if (correct)
-				return model
+			if (correct) return model
 		}
 
 		correct = true
 		model = this.tiles[0][2]
 		if (model !== null) {
-
 			for (let i = 0; i < this.tiles.length; i++) {
 				if (this.tiles[i][2 - i] !== model) {
 					correct = false
 					break
 				}
 			}
-			if (correct)
-				return model
+			if (correct) return model
 		}
 		return null
 	}

@@ -1,9 +1,9 @@
 import * as fs from 'fs'
 import * as path from 'path'
-
-import Brain from '../Brain'
 import Board from '../Board'
+import Brain from '../Brain'
 import { unmapxy } from '../helper'
+
 const decision = require('./decisions.json')
 
 let board: Board
@@ -11,7 +11,6 @@ const brain = new Brain()
 brain.brain = decision
 
 const games = Number(process.argv[2])
-
 
 if (process.argv.includes('help')) {
 	console.log(`
@@ -28,47 +27,43 @@ Description:
 	process.exit()
 }
 
-
 const playerMove = (board: Sign[][]): [Coord, Coord] => {
 	let choices: number[][] = []
 	board.flat().forEach((sign, i) => {
-		if (sign === null)
-			choices.push([Math.floor(i / 3), i % 3])
+		if (sign === null) choices.push([Math.floor(i / 3), i % 3])
 	})
 
 	const [x, y] = choices[Math.floor(Math.random() * choices.length)] as Coord[]
 	return [x, y]
 }
 
-const starting = function () {
+const starting = (function() {
 	let starter: () => 0 | 1
-	if (process.argv.includes('--player'))
-		starter = () => 0
-	else if (process.argv.includes('--AI'))
-		starter = () => 1
-	else
-		starter = () => Math.floor(Math.random() * 2) as 0 | 1
+	if (process.argv.includes('--player')) starter = () => 0
+	else if (process.argv.includes('--AI')) starter = () => 1
+	else starter = () => Math.floor(Math.random() * 2) as 0 | 1
 
 	return starter
-}()
+})()
 
-
-let off = 0, def = 0
+let off = 0,
+	def = 0
 for (let i = 0; i < games; i++) {
-	process.stdout.write(`\r${(i / games * 100).toFixed(2).padStart(5)}%`)
+	process.stdout.write(`\r${((i / games) * 100).toFixed(2).padStart(5)}%`)
 	board = new Board(3, 3, starting())
 	let moves = starting()
 
-	let prevX: Coord = 0, prevY: Coord = 0
-	let prevRotations: string[] = [], prevMirrors: string[] = []
-
+	let prevX: Coord = 0,
+		prevY: Coord = 0
+	let prevRotations: string[] = [],
+		prevMirrors: string[] = []
 
 	while (true) {
 		let x: Coord, y: Coord
 		let { rotations, mirrors } = board
 
 		if (++moves % 2) {
-			[x, y] = playerMove(board.tiles)
+			;[x, y] = playerMove(board.tiles)
 			board.playerMove(x, y)
 		} else {
 			const { x: xx, y: yy } = brain.decide(board.rotations, board.mirrors)
@@ -101,11 +96,15 @@ for (let i = 0; i < games; i++) {
 					let target = brain.brain[key] as FitGuess[]
 					if (target.length === 1) break
 
-					let [xx, yy] = unmapxy(x, y, i % 4, i < 4 ? 'rotation' : 'mirror');
+					let [xx, yy] = unmapxy(x, y, i % 4, i < 4 ? 'rotation' : 'mirror')
 
-					(brain.brain[key] as FitGuess[]) = [{
-						x: xx, y: yy, fitness: 100
-					}]
+					;(brain.brain[key] as FitGuess[]) = [
+						{
+							x: xx,
+							y: yy,
+							fitness: 100
+						}
+					]
 					off++
 					break
 				}
@@ -115,8 +114,8 @@ for (let i = 0; i < games; i++) {
 		} else if (board.full) {
 			break
 		}
-		[prevX, prevY] = [x, y];
-		[prevRotations, prevMirrors] = [rotations, mirrors]
+		;[prevX, prevY] = [x, y]
+		;[prevRotations, prevMirrors] = [rotations, mirrors]
 	}
 }
 
