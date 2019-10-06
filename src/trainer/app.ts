@@ -1,5 +1,5 @@
-import * as fs from 'fs'
-import * as path from 'path'
+import { writeFileSync } from 'fs'
+import { join } from 'path'
 import Board from '../Board'
 import Brain from '../Brain'
 import { unmapxy } from '../helper'
@@ -12,7 +12,11 @@ brain.brain = decision
 
 const games = Number(process.argv[2])
 
-if (process.argv.includes('help')) {
+if (
+	process.argv.includes('help') ||
+	process.argv.includes('-h') ||
+	process.argv.includes('--help')
+) {
 	console.log(`
 Usage: 
 	node trainer <amount of games>
@@ -97,7 +101,6 @@ for (let i = 0; i < games; i++) {
 					if (target.length === 1) break
 
 					let [xx, yy] = unmapxy(x, y, i % 4, i < 4 ? 'rotation' : 'mirror')
-
 					;(brain.brain[key] as FitGuess[]) = [
 						{
 							x: xx,
@@ -119,6 +122,6 @@ for (let i = 0; i < games; i++) {
 	}
 }
 
-fs.writeFileSync(path.join(__dirname, 'decisions.json'), JSON.stringify(brain.brain, null, 4))
+writeFileSync(join(__dirname, 'decisions.json'), JSON.stringify(brain.brain, null, 4))
 
 process.stdout.write(`\rLearned ${def} new defensive moves and ${off} offensive ones.`)
