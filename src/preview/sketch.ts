@@ -20,6 +20,8 @@ const env = {
 	starting: ((): (() => keyof Signs) => {
 		let nodes = Array.from(document.querySelectorAll('input[name=starting]')) as HTMLInputElement[]
 
+		for (const radio of nodes) radio.addEventListener('change', restartGame)
+
 		return (): keyof Signs => {
 			for (const radio of nodes) if (radio.checked) return radio.value as keyof Signs
 			return 'player'
