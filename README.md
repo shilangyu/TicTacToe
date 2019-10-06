@@ -1,5 +1,6 @@
 # TicTacToe
 
+[![Build Status](https://travis-ci.com/shilangyu/TicTacToe.svg?branch=master)](https://travis-ci.com/shilangyu/TicTacToe)
 [Try me!](https://shilangyu.github.io/TicTacToe)
 Project where I created a trainer and a previewer of a TicTacToe AI. This project did not abuse the OP neural networks.
 
