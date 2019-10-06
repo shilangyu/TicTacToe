@@ -1,4 +1,4 @@
-import Board from '../Board'
+import Board, { Signs } from '../Board'
 import Brain from '../Brain'
 
 const env = {
@@ -17,12 +17,12 @@ const env = {
 			'2d'
 		) as CanvasRenderingContext2D
 	},
-	starting: (function(): () => string {
+	starting: ((): (() => keyof Signs) => {
 		let nodes = Array.from(document.querySelectorAll('input[name=starting]')) as HTMLInputElement[]
 
-		return (): string => {
-			for (const radio of nodes) if (radio.checked) return radio.value
-			return ''
+		return (): keyof Signs => {
+			for (const radio of nodes) if (radio.checked) return radio.value as keyof Signs
+			return 'player'
 		}
 	})(),
 	fps: 60

@@ -1,6 +1,6 @@
 import { mirror, rotate } from './helper'
 
-interface Signs {
+export interface Signs {
 	AI: string
 	player: string
 }
