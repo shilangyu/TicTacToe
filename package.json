@@ -4,6 +4,7 @@
 	"description": "A simple tictactoe game with a trained AI",
 	"main": "app.js",
 	"scripts": {
+		"start": "npm run build && live-server ./public",
 		"dev": "concurrently \"webpack --watch\" \"live-server ./public\"",
 		"train": "ts-node --files src/trainer/app.ts",
 		"build": "webpack"
