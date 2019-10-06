@@ -54,13 +54,13 @@ async function setup() {
 		if (board.turn === 0 && board.tiles[grid[1]][grid[0]] === null) {
 			const playerWon = board.playerMove(grid[1], grid[0])
 			if (playerWon) endGame(0)
-			if (board.full) endGame(null)
+			else if (board.full) endGame(null)
 
 			if (!playerWon) {
 				const { x, y } = brain.decide(board.rotations, board.mirrors)
 				const AIWon = board.aiMove(x, y)
 				if (AIWon) endGame(1)
-				if (board.full) endGame(null)
+				else if (board.full) endGame(null)
 			}
 		}
 	})
