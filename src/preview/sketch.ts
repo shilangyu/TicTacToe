@@ -1,5 +1,5 @@
-import Brain from '../Brain'
 import Board from '../Board'
+import Brain from '../Brain'
 
 const env = {
 	scale: 150,
@@ -13,25 +13,25 @@ const env = {
 			x: 450,
 			y: 450
 		},
-		ctx:(document.querySelector('canvas') as HTMLCanvasElement).getContext('2d') as CanvasRenderingContext2D
+		ctx: (document.querySelector('canvas') as HTMLCanvasElement).getContext(
+			'2d'
+		) as CanvasRenderingContext2D
 	},
-	starting: function (): () => string {
+	starting: (function(): () => string {
 		let nodes = Array.from(document.querySelectorAll('input[name=starting]')) as HTMLInputElement[]
 
 		return (): string => {
-			for(const radio of nodes)
-				if(radio.checked)
-					return radio.value
+			for (const radio of nodes) if (radio.checked) return radio.value
 			return ''
 		}
-	}(),
+	})(),
 	fps: 60
 }
 
 let board: Board
 const brain = new Brain()
 
-async function setup () {
+async function setup() {
 	restartGame()
 
 	brain.brain = await (await fetch('./decisions.json')).json()
@@ -42,22 +42,23 @@ async function setup () {
 	env.canvas.ctx.textAlign = 'center'
 	env.canvas.ctx.textBaseline = 'middle'
 
+	env.canvas.ref.addEventListener('click', ({ offsetX: x, offsetY: y, target }) => {
+		const { clientHeight: canvasHeight, clientWidth: canvasWidth } = target as HTMLElement
 
-	env.canvas.ref.addEventListener('click', ({ layerX: x, layerY: y, target }) => {
-		const { clientHeight: canvasHeight, clientWidth: canvasWidth } = (target as HTMLElement)
-
-		const grid = [x / (canvasWidth / board.width), y / (canvasHeight / board.height)].map(e => Math.floor(e) as Coord)
+		const grid = [x / (canvasWidth / board.width), y / (canvasHeight / board.height)].map(
+			e => Math.floor(e) as Coord
+		)
 
 		if (board.turn === 0 && board.tiles[grid[1]][grid[0]] === null) {
 			const playerWon = board.playerMove(grid[1], grid[0])
-			if(playerWon) endGame(0)
-			if(board.full) endGame(null)
+			if (playerWon) endGame(0)
+			if (board.full) endGame(null)
 
-			if(!playerWon) {
+			if (!playerWon) {
 				const { x, y } = brain.decide(board.rotations, board.mirrors)
 				const AIWon = board.aiMove(x, y)
-				if(AIWon) endGame(1)
-				if(board.full) endGame(null)
+				if (AIWon) endGame(1)
+				if (board.full) endGame(null)
 			}
 		}
 	})
@@ -66,14 +67,16 @@ async function setup () {
 }
 setup()
 
-
 setInterval(() => {
-	const { scale, canvas: { size, ref, ctx } } = env
+	const {
+		scale,
+		canvas: { size, ref, ctx }
+	} = env
 	ctx.fillStyle = env.background
 	ctx.fillRect(0, 0, ref.width, ref.height)
 
 	board.tiles.forEach((row, y) =>
-		row.forEach((sign , x) => {
+		row.forEach((sign, x) => {
 			const txt = sign === null ? '' : sign === 0 ? board.signs.player : board.signs.AI
 			ctx.fillStyle = env.strokes
 			ctx.font = `${scale}px sans-serif`
@@ -87,7 +90,7 @@ setInterval(() => {
 			ctx.moveTo(scale * x, 0)
 			ctx.lineTo(scale * x, size.y)
 			ctx.stroke()
-			
+
 			ctx.moveTo(0, scale * y)
 			ctx.lineTo(size.x, scale * y)
 			ctx.stroke()
@@ -101,7 +104,7 @@ function endGame(winner: Sign) {
 
 function restartGame() {
 	board = new Board(3, 3, env.starting() === 'AI' ? 1 : 0)
-	if(env.starting() === 'AI') {
+	if (env.starting() === 'AI') {
 		const { x, y } = brain.decide(board.rotations, board.mirrors)
 		board.aiMove(x, y)
 	}
