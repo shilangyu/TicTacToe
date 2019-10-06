@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Tic Tac Toe</title>
+		<link rel="icon" type="image/png" href="./favicon.png" />
+		<script src="bundle.js" defer></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
 
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Tic Tac Toe</title>
-	<link rel="icon" type="image/png" href="./favicon.png">
-	<script src="bundle.js" defer></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+	<body>
+		<button id="restart">restart</button>
 
-<body>
-	<button id="restart">restart</button>
-	
-	<input type="radio" name="starting" value="AI"> AI
-	<input type="radio" name="starting" value="player" checked> player
-	<div id="msg"></div>
-	<canvas></canvas>
-</body>
-
+		<input type="radio" name="starting" value="AI" /> AI
+		<input type="radio" name="starting" value="player" checked /> player
+		<br />
+		<canvas></canvas>
+		<div id="msg"></div>
+	</body>
 </html>
