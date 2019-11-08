@@ -52,7 +52,7 @@ export default class Brain {
 				fitness: 100
 			})
 
-			specimen = specimen.replace(/null(?<rest> *)$/, '    $<rest>')
+			specimen = specimen.replace(/null( *)$/, '    $1')
 		} while (specimen.includes('null'))
 	}
 }
