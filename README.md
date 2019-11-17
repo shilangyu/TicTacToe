@@ -1,8 +1,8 @@
 # TicTacToe
 
-[![Build Status](https://travis-ci.com/shilangyu/TicTacToe.svg?branch=master)](https://travis-ci.com/shilangyu/TicTacToe)
+![](https://github.com/shilangyu/TicTacToe/workflows/deploy/badge.svg)
 
-[Try me!](https://shilangyu.github.io/TicTacToe)
+[Try me!](https://shilangyu.dev/TicTacToe)
 Project where I created a trainer and a previewer of a TicTacToe AI. This project did not abuse the OP neural networks.
 
 ---
@@ -13,7 +13,7 @@ Project where I created a trainer and a previewer of a TicTacToe AI. This projec
 - open browser in `localhost:8080`
 
 Runs in the browser and draws the board on a canvas. The preview uses the previously trained json file as the "brain" of the AI.
-[Try it out](https://shilangyu.github.io/TicTacToe) and see if you can beat it :)
+[Try it out](https://shilangyu.dev/TicTacToe) and see if you can beat it :)
 
 ### Trainer
 
