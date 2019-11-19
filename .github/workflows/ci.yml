@@ -1,9 +1,10 @@
-name: deploy
+name: ci
 
 on:
   push:
     branches:
       - master
+  pull_request:
 
 jobs:
   build:
@@ -26,7 +27,8 @@ jobs:
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@releases/v3
-        env:
+        if: github.event_name == 'push'
+        with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BASE_BRANCH: master
           BRANCH: gh-pages
