@@ -26,7 +26,7 @@ jobs:
           CI: true
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@releases/v3-test
+        uses: JamesIves/github-pages-deploy-action@releases/v3
         if: github.event_name == 'push'
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
