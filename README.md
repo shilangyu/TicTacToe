@@ -1,6 +1,6 @@
 # TicTacToe
 
-![](https://github.com/shilangyu/TicTacToe/workflows/ci/badge.svg)
+[![](https://github.com/shilangyu/TicTacToe/workflows/ci/badge.svg)](https://github.com/shilangyu/TicTacToe/actions)
 
 [Try me!](https://shilangyu.dev/TicTacToe)
 Project where I created a trainer and a previewer of a TicTacToe AI. This project did not abuse the OP neural networks.
