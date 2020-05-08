@@ -28,7 +28,7 @@
 		"@types/webpack": "^4.41.12",
 		"concurrently": "^5.2.0",
 		"live-server": "^1.2.1",
-		"ts-loader": "^7.0.2",
+		"ts-loader": "^7.0.3",
 		"ts-node": "^8.10.1",
 		"typescript": "^3.6.3",
 		"webpack": "^4.43.0",
