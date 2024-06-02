@@ -24,7 +24,7 @@
 	},
 	"homepage": "https://github.com/shilangyu/TicTacToe#readme",
 	"devDependencies": {
-		"@types/node": "^20.12.8",
+		"@types/node": "^20.13.0",
 		"concurrently": "^8.2.2",
 		"live-server": "^1.2.2",
 		"ts-loader": "^9.5.1",
